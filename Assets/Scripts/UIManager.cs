@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UI;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -15,6 +17,8 @@ public class UIManager : MonoBehaviour
     public GameObject panelHowToPlay;
     public GameObject panelInformasiTim;
     public GameObject panelInfo;
+
+    [FormerlySerializedAs("panelNarasi")] public NarationPanel NarationPanel; 
 
     [Header("Tahapan Controllers (TBA)")]
     public TahapanController[] tahapanButtonsTBA;
@@ -106,10 +110,7 @@ public class UIManager : MonoBehaviour
             }
         }
     }
-
-
-
-
+    
     private void SetOnlyOnePanelActive(GameObject panelToShow)
     {
         if (panelHomePage != null) panelHomePage.SetActive(false);
@@ -205,15 +206,20 @@ public class UIManager : MonoBehaviour
         Debug.Log($"UIManager: Status tombol tahapan untuk mode {GameManager.Instance.currentMode} diperbarui.");
     }
     
-    public void SetButtonNavigationEnabled(bool enabled)
+    public void SetButtonNavigationVisibility(bool enabled)
     { 
         btnARNext.gameObject.SetActive(enabled);
         btnARPrev.gameObject.SetActive(enabled);
     }
     
-    public void SetButtonAnimationEnabled(bool enabled)
+    public void SetButtonAnimationVisibility(bool enabled)
     { 
         btnPlayAnimation.gameObject.SetActive(enabled);
         btnStopAnimation.gameObject.SetActive(enabled);
+    }
+    
+    public bool IsPanelInfoActive()
+    {
+        return panelInfo.activeInHierarchy;
     }
 }
