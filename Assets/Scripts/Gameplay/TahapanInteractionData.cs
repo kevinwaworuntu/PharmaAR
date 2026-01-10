@@ -6,7 +6,7 @@ namespace Gameplay
     public class TahapanInteractionData : ScriptableObject
     {
         [SerializeField] private string title;
-        [SerializeField, TextArea(1,3)] private string description;
+        [SerializeField, TextArea(2,3)] private string description;
         [SerializeField] private AudioClip audioNaration;
         [SerializeField] private AnimationClip animationClip;
         

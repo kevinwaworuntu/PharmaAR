@@ -1,8 +1,6 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Config;
 
 namespace Gameplay
@@ -11,33 +9,32 @@ namespace Gameplay
     {
         private Animator animator;
         private AudioSource audioSource;
-        private TextMeshProUGUI titleText;
-        private TextMeshProUGUI descriptionText;
         private AnimationConfig animationConfig;
         private MonoBehaviour coroutineRunner;
 
         private bool isFinished;
         
-        public void Initialize(TextMeshProUGUI titleText, TextMeshProUGUI descriptionText, MonoBehaviour coroutineRunner, Animator animator = null, AudioSource audioSource = null, AnimationConfig animationConfig = null)
+        public void Initialize(MonoBehaviour coroutineRunner, Animator animator = null, AudioSource audioSource = null, AnimationConfig animationConfig = null)
         {
             this.coroutineRunner = coroutineRunner;
             this.animator = animator;
             this.audioSource = audioSource;
-            this.titleText = titleText;
-            this.descriptionText = descriptionText;
             this.animationConfig = animationConfig;
         }
 
         public void Play(TahapanInteractionData data, Action onFinishedCallback = null)
         {
-            if (data == null)
+            if (!data)
             {
                 return;
             }
 
             isFinished = false;
-            titleText.SetText(data.Title);
-            descriptionText.SetText(data.Description);
+            if (UIManager.Instance)
+            {
+                UIManager.Instance.NarationPanel.SetTitleText(data.Title);
+                UIManager.Instance.NarationPanel.SetDescriptionText(data.Description);   
+            }
 
             bool isAnimationFinished = data.AnimationClip == null;
             bool isAudioClipFinished = data.AudioNaration == null;
@@ -47,18 +44,30 @@ namespace Gameplay
                 onFinishedCallback?.Invoke();
                 return;
             }
-            if (data.AnimationClip != null)
+
+            if (animationConfig)
             {
-                animator.SetTrigger(animationConfig.PlayAnimationParamName); 
-                coroutineRunner.StartCoroutine(WaitForDuration(data.AnimationClip.length, () => // This is only valid if animation speed is constant
-                    { 
-                        isAnimationFinished = true;
-                        TryFinish(isAnimationFinished, isAudioClipFinished, () =>
-                        {
-                            onFinishedCallback?.Invoke();
-                        }); 
+                if (animationConfig.GenericAnimController)
+                {
+                    animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = data.AnimationClip;
+                }
+                if (data.AnimationClip != null)
+                {
+                    if (animator != null)
+                    {
+                        animator.SetTrigger(animationConfig.StopAnimationParamName);
+                        animator.SetTrigger(animationConfig.PlayAnimationParamName);
+                        coroutineRunner.StartCoroutine(WaitForDuration(data.AnimationClip.length, () => // This is only valid if animation speed is constant
+                            { 
+                                isAnimationFinished = true;
+                                TryFinish(isAnimationFinished, isAudioClipFinished, () =>
+                                {
+                                    onFinishedCallback?.Invoke();
+                                }); 
+                            }
+                        ));
                     }
-                ));
+                }
             }
             if (data.AudioNaration != null)
             {
