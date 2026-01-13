@@ -29,6 +29,7 @@ namespace Gameplay
         private bool isStarted;
         private TahapanInteractionPlayer interactionPlayer;
 
+        public event Action OnStartWaitingForPlayerInputToContinue;
         public event Action OnInteractionComplete;
         public event Action OnFinishPlayingInteraction;
 
@@ -41,10 +42,10 @@ namespace Gameplay
         private void OnEnable()
         {
             currentInteractionIndex = 0;
-            if (ScreenTapDetection.Instance)
-            {
-                ScreenTapDetection.Instance.OnScreenTappedDelegate += OnScreenTapHandler;
-            }
+            // if (ScreenTapDetection.Instance)
+            // {
+            //     ScreenTapDetection.Instance.OnScreenTappedDelegate += OnScreenTapHandler;
+            // }
         }
 
         private void OnDisable()
@@ -55,29 +56,27 @@ namespace Gameplay
                 if (UIManager.Instance.btnPlayAnimation) UIManager.Instance.btnPlayAnimation.onClick.RemoveAllListeners();
                 if (UIManager.Instance.btnStopAnimation) UIManager.Instance.btnStopAnimation.onClick.RemoveAllListeners();
             }
-            if (ScreenTapDetection.Instance)
-            {
-                ScreenTapDetection.Instance.OnScreenTappedDelegate -= OnScreenTapHandler;
-            }
+            // if (ScreenTapDetection.Instance)
+            // {
+            //     ScreenTapDetection.Instance.OnScreenTappedDelegate -= OnScreenTapHandler;
+            // }
         }
         
+        [ContextMenu("Start Interaction")]
         public void StartInteraction()
         {
-            isStarted = true;
             EnterInteractionState(currentInteractionIndex);
         }
-        
+
+        [ContextMenu("Continue Interaction")]
         public void ContinueInteraction()
         {
             EnterInteractionState(currentInteractionIndex);
         }
 
-        private void OnScreenTapHandler()
+        [ContextMenu("Simulating Tap")]
+        public void PlayerInteractToFinishInteraction()
         {
-            if (!isStarted)
-            {
-                return;
-            }
             if (!isPlaying)
             {
                 return;
@@ -86,11 +85,6 @@ namespace Gameplay
             {
                 return;
             }
-            PlayerInteractToFinishInteraction();
-        }
-
-        private void PlayerInteractToFinishInteraction()
-        {
             ExitInteractionState();
         }
 
@@ -128,10 +122,12 @@ namespace Gameplay
 
         private void MainInteractionState()
         {
+            interactionDataActionMappings[currentInteractionIndex].UniqueEvent?.Invoke();
             interactionPlayer.Play(interactionDataActionMappings[currentInteractionIndex].InteractionData, () =>
             {
                 if (interactionDataActionMappings[currentInteractionIndex].IsNeedPlayerInputToContinue)
                 {
+                    OnStartWaitingForPlayerInputToContinue?.Invoke();
                     return;
                 }
                 ExitInteractionState();
@@ -165,7 +161,6 @@ namespace Gameplay
             {
                 return false;
             }
-
             if (!interactionDataActionMappings[targetIndex].InteractionData)
             {
                 return false;
@@ -175,7 +170,6 @@ namespace Gameplay
             {
                 return false;
             }
-
             return true;
         }
 

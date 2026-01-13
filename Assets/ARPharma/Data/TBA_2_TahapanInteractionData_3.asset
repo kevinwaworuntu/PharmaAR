@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: TBA_2_TahapanInteractionData_3
   m_EditorClassIdentifier: 
   title: Step 3
-  description: Tap layar untuk mulai menuang larutan standar ke dalam buret dari
-    labu ukur melalui corong kaca sambil diputar
+  description: Tap layar untuk membilas buret dengan larutan standar asam perklorat!
   audioNaration: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   animationClip: {fileID: 0}

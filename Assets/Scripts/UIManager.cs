@@ -32,6 +32,8 @@ public class UIManager : MonoBehaviour
     public Button btnARPrev;
 
     public Button btnInfo;  
+    public Button btnNextInteraction; 
+    public Button btnCompleteTahapan; 
 
     [Header("Animation Controls")]
     public Button btnPlayAnimation;

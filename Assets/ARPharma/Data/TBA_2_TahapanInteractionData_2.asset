@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TBA_2_TahapanInteractionData_2
   m_EditorClassIdentifier: 
   title: Step 2
-  description: Mulai dari penuangan sampai larutan berpindah ke gelas beaker
+  description: 
   audioNaration: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   animationClip: {fileID: 7400000, guid: 3e288056e71e0e74a9dc37a8be3fbc16, type: 2}

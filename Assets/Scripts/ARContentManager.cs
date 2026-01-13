@@ -11,14 +11,24 @@ public class ARContentManager : MonoBehaviour
         tahapanInteractionController = GetComponent<TahapanInteractionController>();
         if (tahapanInteractionController != null)
         {
-            tahapanInteractionController.OnFinishPlayingInteraction += OnFinishPlayingTahapanInteraction;
-            tahapanInteractionController.OnInteractionComplete += OnInteractionComplete;
+            tahapanInteractionController.OnStartWaitingForPlayerInputToContinue += OnStartWaitingForPlayerInputToContinueHandler;
+            tahapanInteractionController.OnFinishPlayingInteraction += OnFinishPlayingTahapanInteractionHandler;
+            tahapanInteractionController.OnInteractionComplete += OnInteractionCompleteHandler;
         }
     }
-    
+
+    private void OnEnable()
+    {
+        if (!UIManager.Instance)
+        {
+            return;
+        }
+        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(false);
+        UIManager.Instance.btnNextInteraction.gameObject.SetActive(true);
+    }
+
     public void OnTargetFound()
     {
-        //ToDo : CleanUp
         if (UIManager.Instance.IsPanelInfoActive())
         {
             return;
@@ -30,7 +40,30 @@ public class ARContentManager : MonoBehaviour
         tahapanInteractionController.StartInteraction();
     }
 
-    private void OnFinishPlayingTahapanInteraction()
+    private void OnStartWaitingForPlayerInputToContinueHandler()
+    {
+        if (!UIManager.Instance)
+        {
+            return;
+        }
+        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(false);
+        UIManager.Instance.btnNextInteraction.gameObject.SetActive(true);
+        
+        // ToDo : Play Button Next Interaction Visual Cue
+        if (!tahapanInteractionController)
+        {
+            return;
+        }
+        UIManager.Instance.btnNextInteraction.onClick.RemoveAllListeners();
+        UIManager.Instance.btnNextInteraction.onClick.AddListener(tahapanInteractionController.PlayerInteractToFinishInteraction);
+        UIManager.Instance.btnNextInteraction.onClick.AddListener(() =>
+        {
+            UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(false);
+            UIManager.Instance.btnNextInteraction.gameObject.SetActive(false);
+        });
+    }
+    
+    private void OnFinishPlayingTahapanInteractionHandler()
     {
         if (!tahapanInteractionController)
         {
@@ -38,14 +71,22 @@ public class ARContentManager : MonoBehaviour
         }
         tahapanInteractionController.ContinueInteraction();
     }
-    private void OnInteractionComplete()
+    private void OnInteractionCompleteHandler()
     {
-        //Debug.Break();
+        if (!UIManager.Instance)
+        {
+            return;
+        }
+        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(true);
+        UIManager.Instance.btnNextInteraction.gameObject.SetActive(false);
+
+        UIManager.Instance.btnCompleteTahapan.onClick.RemoveAllListeners();
+        UIManager.Instance.btnNextInteraction.onClick.AddListener(GameManager.Instance.CompleteCurrentTahap);
     }
 
     public void OnTargetLost()
     {
-        if (UIManager.Instance == null)
+        if (!UIManager.Instance)
         {
             return;
         }

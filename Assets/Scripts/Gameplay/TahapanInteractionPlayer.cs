@@ -32,8 +32,15 @@ namespace Gameplay
             isFinished = false;
             if (UIManager.Instance)
             {
-                UIManager.Instance.NarationPanel.SetTitleText(data.Title);
-                UIManager.Instance.NarationPanel.SetDescriptionText(data.Description);   
+                if (string.IsNullOrEmpty(data.Title) && string.IsNullOrEmpty(data.Description))
+                {
+                    UIManager.Instance.NarationPanel.gameObject.SetActive(false);
+                }
+                else
+                {
+                    UIManager.Instance.NarationPanel.SetTitleText(data.Title);
+                    UIManager.Instance.NarationPanel.SetDescriptionText(data.Description);     
+                }
             }
 
             bool isAnimationFinished = data.AnimationClip == null;

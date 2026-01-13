@@ -37,7 +37,14 @@ namespace Utility
 
         private void HandleTap(InputAction.CallbackContext ctx)
         {
-            if (EventSystem.current != null &&  EventSystem.current.IsPointerOverGameObject())
+            Pointer pointer = Pointer.current;
+            if (pointer == null)
+            {
+                return;
+                
+            }
+            int pointerId = pointer.deviceId;
+            if (EventSystem.current != null &&  EventSystem.current.IsPointerOverGameObject(pointerId))
             {
                 return;
             }
