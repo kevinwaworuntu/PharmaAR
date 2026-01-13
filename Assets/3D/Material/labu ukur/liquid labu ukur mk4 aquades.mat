@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: liquid labu ukur
+  m_Name: liquid labu ukur mk4 aquades
   m_Shader: {fileID: -6465566751694194690, guid: db860e33a3319c246b35503c60063db8,
     type: 3}
   m_Parent: {fileID: 0}
@@ -55,7 +55,7 @@ Material:
     m_Floats:
     - _Alpha: 0.13
     - _AlphaClip: 1
-    - _Fill: 0
+    - _Fill: -0.031
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Y: 0
