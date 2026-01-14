@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class ARContentManager : MonoBehaviour
 {
-    private int currentIndex;
-    private TahapanInteractionController tahapanInteractionController;
+    protected TahapanInteractionController tahapanInteractionController;
 
-    private void Start()
+    protected void Start()
     {
         tahapanInteractionController = GetComponent<TahapanInteractionController>();
         if (tahapanInteractionController != null)
@@ -17,14 +16,14 @@ public class ARContentManager : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    protected void OnEnable()
     {
         if (!UIManager.Instance)
         {
             return;
         }
         UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(false);
-        UIManager.Instance.btnNextInteraction.gameObject.SetActive(true);
+        UIManager.Instance.btnNextInteraction.gameObject.SetActive(false);
     }
 
     public void OnTargetFound()
@@ -40,7 +39,7 @@ public class ARContentManager : MonoBehaviour
         tahapanInteractionController.StartInteraction();
     }
 
-    private void OnStartWaitingForPlayerInputToContinueHandler()
+    protected virtual void OnStartWaitingForPlayerInputToContinueHandler()
     {
         if (!UIManager.Instance)
         {
@@ -63,7 +62,7 @@ public class ARContentManager : MonoBehaviour
         });
     }
     
-    private void OnFinishPlayingTahapanInteractionHandler()
+    protected void OnFinishPlayingTahapanInteractionHandler()
     {
         if (!tahapanInteractionController)
         {
@@ -71,7 +70,7 @@ public class ARContentManager : MonoBehaviour
         }
         tahapanInteractionController.ContinueInteraction();
     }
-    private void OnInteractionCompleteHandler()
+    protected void OnInteractionCompleteHandler()
     {
         if (!UIManager.Instance)
         {

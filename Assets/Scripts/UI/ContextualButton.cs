@@ -52,5 +52,10 @@ namespace UI
         {
             currentActionCached?.Invoke();
         }
+
+        public void SetEnabled(bool enabled)
+        {
+            button.interactable = enabled;
+        }
     }
 }

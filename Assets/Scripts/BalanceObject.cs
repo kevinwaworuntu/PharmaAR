@@ -7,7 +7,23 @@ public class BalanceObject : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI displayText;
     private float currentWeight;
+
+    private void OnEnable()
+    {
+        displayText.SetText("0");
+        currentWeight = 0;
+    }
+
+    public void SetWeight(float weight)
+    {
+        currentWeight = weight;
+    }
     
+    public float GetCurrentWeight()
+    {
+        return currentWeight;
+    }
+
     public void IncreaseWeight(float weight)
     {
         if (displayText == null)

@@ -33,10 +33,15 @@ namespace UI
         
         public void DestroyButtons()
         {
-            foreach (ContextualButton contextualButton in contextualButtons)
+            for (int i = contextualButtons.Count - 1; i >= 0; i--)
             {
-                Destroy(contextualButton);
+                if (!contextualButtons[i])
+                {
+                    continue;
+                }
+                Destroy(contextualButtons[i].gameObject);
             }
+            contextualButtons.Clear();
         }
         
         public void RegisterAction(int targetButtonIndex, Action action)
@@ -49,6 +54,16 @@ namespace UI
         {
             // ToDo : Check if index valid
             contextualButtons[targetButtonIndex].RegisterText(text);
+        }
+
+        public List<ContextualButton> GetContextualButtons()
+        {
+            return contextualButtons;
+        }
+        
+        public ContextualButton GetContextualButton(int targetButtonIndex)
+        {
+            return contextualButtons.Count > targetButtonIndex ? contextualButtons[targetButtonIndex] : null;
         }
     }
 }
