@@ -2530,7 +2530,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 106856114}
           m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanButton
+          m_MethodName: CreateButtonInteraction
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2590,20 +2590,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d33a5177b5549f48dccbf33146e4d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTargetWeight: 0
-  targetWeightAnhidrida: 40
-  targetWeightBenzena: 80
-  animClipAnhidrida_1ml: {fileID: 0}
-  animClipAnhidrida_10ml: {fileID: 0}
-  animClipBenzena_1ml: {fileID: 0}
-  animClipBenzena_10ml: {fileID: 0}
-  animator: {fileID: 0}
-  _fluidAnhidridaMaterial: {fileID: 0}
-  _fluidBenzenaMaterial: {fileID: 0}
-  value1Ml: 0.0008
-  value10Ml: 0.008
   floorTarget: 10
   ceilTarget: 10.2
+  currentWeight: 0
+  animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
+  animClipCloseKeran: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetes: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
+  animator: {fileID: 1451460084}
+  titrasiRenderer: {fileID: 1022462318}
+  initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
+  targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
 --- !u!1 &108886650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,6 +2781,7 @@ GameObject:
   - component: {fileID: 135367194}
   - component: {fileID: 135367197}
   - component: {fileID: 135367198}
+  - component: {fileID: 135367199}
   m_Layer: 0
   m_Name: marker-bebasair-10
   m_TagString: Untagged
@@ -2832,10 +2829,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135367199}
+        m_TargetAssemblyTypeName: ARContentManager, Assembly-CSharp
+        m_MethodName: OnTargetFound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 135367199}
+        m_TargetAssemblyTypeName: ARContentManager, Assembly-CSharp
+        m_MethodName: OnTargetLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &135367195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,8 +2912,125 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af41a865faa2404aa9ceb4ebe5916d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDataActionMappings: []
-  animator: {fileID: 0}
+  interactionDataActionMappings:
+  - InteractionData: {fileID: 11400000, guid: b44e89db5e66eb144bcabeaab9bf1775, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: f024c9373c41cd14f8c539b4418ef37e, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135367192}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 135367192}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: 43d4f7549ce9f60488489cae18fcb797, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: b44e89db5e66eb144bcabeaab9bf1775, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: f024c9373c41cd14f8c539b4418ef37e, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: 43d4f7549ce9f60488489cae18fcb797, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: b44e89db5e66eb144bcabeaab9bf1775, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: f024c9373c41cd14f8c539b4418ef37e, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: 43d4f7549ce9f60488489cae18fcb797, type: 2}
+    IsNeedPlayerInputToContinue: 0
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  animator: {fileID: 2121138282}
   audioSource: {fileID: 1705230721}
 --- !u!114 &135367198
 MonoBehaviour:
@@ -2913,6 +3051,28 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 135367195}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &135367199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135367192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d33a5177b5549f48dccbf33146e4d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorTarget: 20.6
+  ceilTarget: 21
+  currentWeight: 0
+  animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
+  animClipCloseKeran: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetes: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
+  animator: {fileID: 2121138282}
+  titrasiRenderer: {fileID: 1606882368}
+  initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
+  targetColor: {r: 0, g: 1, b: 0.065570354, a: 1}
 --- !u!1 &148338001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,10 +3617,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 179315081}
+        m_TargetAssemblyTypeName: ARContentManager, Assembly-CSharp
+        m_MethodName: OnTargetFound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 179315081}
+        m_TargetAssemblyTypeName: ARContentManager, Assembly-CSharp
+        m_MethodName: OnTargetLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &179315077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3516,8 +3700,125 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af41a865faa2404aa9ceb4ebe5916d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDataActionMappings: []
-  animator: {fileID: 0}
+  interactionDataActionMappings:
+  - InteractionData: {fileID: 11400000, guid: 2915388e60100d94299413a6e943f13c, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: a361e064c4818ea4488cd4048a84a27a, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 179315081}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 179315081}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: be5a5e4d788f569478058ec3886f0763, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: 623aba72a8c17714a90a16d3229dcfab, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: 1b1d0ec6147c11742baf7585dfb9c051, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 179315081}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 179315081}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: 1c4f011a44e62cd459b4527f0ae22f6f, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: eaf777cb5f1412647960062869264bad, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: 84459b0d00e3bf94880498f683edb40c, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 179315081}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 179315081}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: 99bd444b225842540be608c5af3952aa, type: 2}
+    IsNeedPlayerInputToContinue: 0
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  animator: {fileID: 2024141931}
   audioSource: {fileID: 1705230721}
 --- !u!114 &179315080
 MonoBehaviour:
@@ -3550,20 +3851,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d33a5177b5549f48dccbf33146e4d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTargetWeight: 0
-  targetWeightAnhidrida: 40
-  targetWeightBenzena: 80
-  animClipAnhidrida_1ml: {fileID: 0}
-  animClipAnhidrida_10ml: {fileID: 0}
-  animClipBenzena_1ml: {fileID: 0}
-  animClipBenzena_10ml: {fileID: 0}
+  floorTarget: 6
+  ceilTarget: 6.9
+  currentWeight: 0
+  animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
+  animClipCloseKeran: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetes: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animator: {fileID: 2024141931}
-  _fluidAnhidridaMaterial: {fileID: 0}
-  _fluidBenzenaMaterial: {fileID: 0}
-  value1Ml: 0.0008
-  value10Ml: 0.008
-  floorTarget: 10
-  ceilTarget: 10.2
+  titrasiRenderer: {fileID: 1182684166}
+  initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
+  targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
 --- !u!1 &180129757
 GameObject:
   m_ObjectHideFlags: 0
@@ -7839,6 +8136,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424916048}
   m_CullTransparentMesh: 1
+--- !u!23 &460972793 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3671873038660233279, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 3517587671129020795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &467396493
 GameObject:
   m_ObjectHideFlags: 0
@@ -16193,6 +16496,7 @@ GameObject:
   - component: {fileID: 977520212}
   - component: {fileID: 977520215}
   - component: {fileID: 977520216}
+  - component: {fileID: 977520217}
   m_Layer: 0
   m_Name: marker-bebasair-9
   m_TagString: Untagged
@@ -16240,10 +16544,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 977520217}
+        m_TargetAssemblyTypeName: ARContentManager, Assembly-CSharp
+        m_MethodName: OnTargetFound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 977520217}
+        m_TargetAssemblyTypeName: ARContentManager, Assembly-CSharp
+        m_MethodName: OnTargetLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &977520213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16299,8 +16627,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af41a865faa2404aa9ceb4ebe5916d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDataActionMappings: []
-  animator: {fileID: 0}
+  interactionDataActionMappings:
+  - InteractionData: {fileID: 11400000, guid: c55e82e25bf29d8438f7b5126e47b7a0, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: 3771bb28f9f19124995bb8f40987a299, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 977520217}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 977520217}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: ca5b642462f89d24dac349dd28e7e7a0, type: 2}
+    IsNeedPlayerInputToContinue: 0
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  animator: {fileID: 1540916908}
   audioSource: {fileID: 1705230721}
 --- !u!114 &977520216
 MonoBehaviour:
@@ -16321,6 +16688,28 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 977520213}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &977520217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977520210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d33a5177b5549f48dccbf33146e4d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorTarget: 6
+  ceilTarget: 6.9
+  currentWeight: 0
+  animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
+  animClipCloseKeran: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetes: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
+  animator: {fileID: 1540916908}
+  titrasiRenderer: {fileID: 1104806597}
+  initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
+  targetColor: {r: 0.5157392, g: 1, b: 0, a: 1}
 --- !u!1 &999607755
 GameObject:
   m_ObjectHideFlags: 0
@@ -16470,6 +16859,12 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 37740398608026895, guid: 94bb1dfbb51a3504f99acc21aea80337,
     type: 3}
   m_PrefabInstance: {fileID: 5405446064099635181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1022462318 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4316007645648819216, guid: 0bcdceb273398d14b80b1d1ef415ed75,
+    type: 3}
+  m_PrefabInstance: {fileID: 443362274160256496}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1041682446
 GameObject:
@@ -16814,6 +17209,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088361465}
   m_CullTransparentMesh: 1
+--- !u!23 &1104806597 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2278547455884128742, guid: f25e18ad9e66a1c498088a20ab7e2220,
+    type: 3}
+  m_PrefabInstance: {fileID: 909539010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1105698076
 GameObject:
   m_ObjectHideFlags: 0
@@ -17251,6 +17652,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149753682}
   m_CullTransparentMesh: 1
+--- !u!23 &1182684166 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3843404100416005533, guid: b695a80f7b6c0124681f5d5f5cb6774e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1869029595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1185205626
 GameObject:
   m_ObjectHideFlags: 0
@@ -19119,6 +19526,12 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 626653256}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1376045696 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3671873038660233279, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 565845332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1378495894
 GameObject:
   m_ObjectHideFlags: 0
@@ -19924,7 +20337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balanceObject: {fileID: 542902857}
-  targetWeight: 50
+  targetWeight: 400
   animator: {fileID: 871386558}
   animClipBalance: {fileID: 7400000, guid: 95f13f546bcc63d4d9da3be0783052cb, type: 2}
 --- !u!114 &1408983916
@@ -20422,8 +20835,8 @@ GameObject:
   - component: {fileID: 1451963018}
   - component: {fileID: 1451963017}
   - component: {fileID: 1451963020}
-  - component: {fileID: 1451963021}
   - component: {fileID: 1451963022}
+  - component: {fileID: 1451963023}
   m_Layer: 0
   m_Name: marker-kompleksometri-8
   m_TagString: Untagged
@@ -20525,7 +20938,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1451963021}
+  mPreview: {fileID: 1451963023}
 --- !u!4 &1451963019
 Transform:
   m_ObjectHideFlags: 0
@@ -20579,7 +20992,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1451963022}
           m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanButton
+          m_MethodName: CreateButtonInteraction
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -20618,7 +21031,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1451963022}
           m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanButton
+          m_MethodName: CreateButtonInteraction
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -20657,7 +21070,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1451963022}
           m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanButton
+          m_MethodName: CreateButtonInteraction
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -20674,7 +21087,29 @@ MonoBehaviour:
         m_Calls: []
   animator: {fileID: 2146197843}
   audioSource: {fileID: 1705230721}
---- !u!114 &1451963021
+--- !u!114 &1451963022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451963015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d33a5177b5549f48dccbf33146e4d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorTarget: 10
+  ceilTarget: 10.2
+  currentWeight: 0
+  animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
+  animClipCloseKeran: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetes: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
+  animator: {fileID: 2146197843}
+  titrasiRenderer: {fileID: 460972793}
+  initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
+  targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
+--- !u!114 &1451963023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20693,32 +21128,6 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1451963018}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
---- !u!114 &1451963022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451963015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d33a5177b5549f48dccbf33146e4d6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTargetWeight: 0
-  targetWeightAnhidrida: 40
-  targetWeightBenzena: 80
-  animClipAnhidrida_1ml: {fileID: 0}
-  animClipAnhidrida_10ml: {fileID: 0}
-  animClipBenzena_1ml: {fileID: 0}
-  animClipBenzena_10ml: {fileID: 0}
-  animator: {fileID: 0}
-  _fluidAnhidridaMaterial: {fileID: 0}
-  _fluidBenzenaMaterial: {fileID: 0}
-  value1Ml: 0.0008
-  value10Ml: 0.008
-  floorTarget: 10
-  ceilTarget: 10.2
 --- !u!1 &1474967335
 GameObject:
   m_ObjectHideFlags: 0
@@ -22342,6 +22751,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527283709}
   m_CullTransparentMesh: 1
+--- !u!95 &1540916908 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 723803493565848897, guid: f25e18ad9e66a1c498088a20ab7e2220,
+    type: 3}
+  m_PrefabInstance: {fileID: 909539010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1551100813
 GameObject:
   m_ObjectHideFlags: 0
@@ -22575,6 +22990,12 @@ Transform:
   - {fileID: 1948081735}
   m_Father: {fileID: 591769540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1606882368 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3417427139710361048, guid: 16355c58438d32c4b9243d00b8a7576f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121138280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1608367736
 GameObject:
   m_ObjectHideFlags: 0
@@ -26011,6 +26432,7 @@ GameObject:
   - component: {fileID: 1861059079}
   - component: {fileID: 1861059082}
   - component: {fileID: 1861059083}
+  - component: {fileID: 1861059084}
   m_Layer: 0
   m_Name: marker-kompleksometri-10
   m_TagString: Untagged
@@ -26058,10 +26480,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1861059084}
+        m_TargetAssemblyTypeName: ARContentManager, Assembly-CSharp
+        m_MethodName: OnTargetFound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1861059084}
+        m_TargetAssemblyTypeName: ARContentManager, Assembly-CSharp
+        m_MethodName: OnTargetLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1861059080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26117,8 +26563,125 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af41a865faa2404aa9ceb4ebe5916d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionDataActionMappings: []
-  animator: {fileID: 0}
+  interactionDataActionMappings:
+  - InteractionData: {fileID: 11400000, guid: cf333dceef6a62247b78e569a4494c5e, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: bef9b314735860d48880a060c553bebf, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: 027c0d9a2e7bb1048992c58f0c7139b9, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: 88b54ec2a2c1a6f44a79c8f06a84e7dc, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: 195b2a868a928d343a31482cd26cb9f6, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: 5ee65e27569ff194ab8c123e1e24bbd9, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: c8c54b4c3b88c0b49b0c38bdb3447ae3, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: fe3ceea785791454cb43a211e72e87b7, type: 2}
+    IsNeedPlayerInputToContinue: 1
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: CreateButtonInteraction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1861059084}
+          m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
+          m_MethodName: SetIsCheckWeightToContinue
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - InteractionData: {fileID: 11400000, guid: 5425d50a9190bfc4e851c60efa3f8477, type: 2}
+    IsNeedPlayerInputToContinue: 0
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  animator: {fileID: 1949524553}
   audioSource: {fileID: 1705230721}
 --- !u!114 &1861059083
 MonoBehaviour:
@@ -26139,6 +26702,28 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1861059080}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1861059084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861059077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d33a5177b5549f48dccbf33146e4d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorTarget: 40
+  ceilTarget: 40.8
+  currentWeight: 0
+  animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
+  animClipCloseKeran: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetes: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
+  animator: {fileID: 1949524553}
+  titrasiRenderer: {fileID: 1376045696}
+  initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
+  targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
 --- !u!1001 &1869029595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27183,6 +27768,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948081734}
   m_Mesh: {fileID: 2682970619835660023, guid: 6e246510a45ccfb449fa0146dfc75f98, type: 3}
+--- !u!95 &1949524553 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 779033394730817121, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 565845332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1957900145
 GameObject:
   m_ObjectHideFlags: 0
@@ -29218,6 +29809,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2121138280}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2121138282 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 14255764229619015, guid: 16355c58438d32c4b9243d00b8a7576f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121138280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2124452370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29660,6 +30257,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1451963019}
     m_Modifications:
+    - target: {fileID: 779033394730817121, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6378290267242157323, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
         type: 3}
       propertyPath: m_Name
