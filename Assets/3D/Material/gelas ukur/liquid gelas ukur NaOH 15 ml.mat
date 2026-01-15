@@ -42,7 +42,7 @@ Material:
     m_Floats:
     - _Alpha: 0.13
     - _AlphaClip: 1
-    - _Fill: 0.012
+    - _Fill: 0.021599997
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
