@@ -8,30 +8,30 @@ namespace Gameplay
 {
     public class TBA4Manager : ARContentManager
     {
-        private int currentWeight;
+        protected int currentWeight;
         public int currentTargetWeight;
         public int targetWeightAnhidrida = 40;
         public int targetWeightBenzena = 80;
 
-        [SerializeField] private AnimationClip animClipAnhidrida_1ml;
-        [FormerlySerializedAs("animClip_10ml")] [SerializeField] private AnimationClip animClipAnhidrida_10ml;
-        [SerializeField] private AnimationClip animClipBenzena_1ml;
-        [SerializeField] private AnimationClip animClipBenzena_10ml;
-        [SerializeField] private Animator animator;
+        [SerializeField] protected AnimationClip animClipAnhidrida_1ml;
+        [SerializeField] protected AnimationClip animClipAnhidrida_10ml;
+        [SerializeField] protected AnimationClip animClipBenzena_1ml;
+        [SerializeField] protected AnimationClip animClipBenzena_10ml;
+        [SerializeField] protected Animator animator;
         
         [FormerlySerializedAs("_fluidMaterial")] [SerializeField] private Material _fluidAnhidridaMaterial;
-        [SerializeField] private Material _fluidBenzenaMaterial;
-        [SerializeField] private float value1Ml = 0.0008f;
-        [SerializeField] private float value10Ml = 0.008f;
+        [SerializeField] protected Material _fluidBenzenaMaterial;
+        [SerializeField] protected float value1Ml = 0.0008f;
+        [SerializeField] protected float value10Ml = 0.008f;
         
-        private bool isCheckWeightToContinue;
+        protected bool isCheckWeightToContinue;
         
-        private enum LarutanState
+        protected enum LarutanState
         {
             Larutan1,
             Larutan2
         }
-        private LarutanState currentLarutanState = LarutanState.Larutan1;
+        protected LarutanState currentLarutanState = LarutanState.Larutan1;
         
         public void CreatePenambahanLarutanAnhidridaButton()
         {
@@ -92,7 +92,7 @@ namespace Gameplay
            
         }
 
-        private void SetButtonEnabledState(bool enabled)
+        protected void SetButtonEnabledState(bool enabled)
         {
             foreach (var contextualButton in ContextualButtonController.Instance.GetContextualButtons())
             {
@@ -100,17 +100,17 @@ namespace Gameplay
             }
         }
         
-        private bool IsCurrentWeightComplete()
+        protected virtual bool IsCurrentWeightComplete()
         {
             return currentWeight == currentTargetWeight;
         }
         
-        private bool IsCurrentWeightExceedTarget()
+        protected virtual bool IsCurrentWeightExceedTarget()
         {
             return currentWeight > currentTargetWeight;
         }
 
-        private void RestartCurrentInteraction()
+        protected void RestartCurrentInteraction()
         {
             currentWeight = 0; 
             if (currentLarutanState == LarutanState.Larutan1)
@@ -125,7 +125,7 @@ namespace Gameplay
             tahapanInteractionController.RestartInteraction();
         }
         
-        private void PlayAnimation(AnimationClip clip)
+        protected void PlayAnimation(AnimationClip clip)
         {
             var animationConfig = GameManager.Instance.AnimationConfig;
             if (!animationConfig)
