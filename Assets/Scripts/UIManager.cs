@@ -140,6 +140,7 @@ public class UIManager : MonoBehaviour
         if (currentActivePanel == panelScanAR && GameManager.Instance != null)
         {
             GameManager.Instance.SetARCameraActive(false);
+            GameManager.Instance.SetARCameraActive(false);
             HideAllARPopups();
         }
 
