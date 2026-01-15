@@ -1,4 +1,5 @@
 using Gameplay;
+using UI;
 using UnityEngine;
 
 public class ARContentManager : MonoBehaviour
@@ -53,6 +54,11 @@ public class ARContentManager : MonoBehaviour
         {
             return;
         }
+        if (tahapanInteractionController.IsPlayingLastIndex())
+        {
+            OnInteractionCompleteHandler();
+            return;
+        }
         UIManager.Instance.btnNextInteraction.onClick.RemoveAllListeners();
         UIManager.Instance.btnNextInteraction.onClick.AddListener(tahapanInteractionController.PlayerInteractToFinishInteraction);
         UIManager.Instance.btnNextInteraction.onClick.AddListener(() =>
@@ -80,7 +86,8 @@ public class ARContentManager : MonoBehaviour
         UIManager.Instance.btnNextInteraction.gameObject.SetActive(false);
 
         UIManager.Instance.btnCompleteTahapan.onClick.RemoveAllListeners();
-        UIManager.Instance.btnNextInteraction.onClick.AddListener(GameManager.Instance.CompleteCurrentTahap);
+        UIManager.Instance.btnCompleteTahapan.onClick.AddListener(GameManager.Instance.CompleteCurrentTahap);
+        UIManager.Instance.btnCompleteTahapan.onClick.AddListener(ContextualButtonController.Instance.DestroyButtons);
     }
 
     public void OnTargetLost()

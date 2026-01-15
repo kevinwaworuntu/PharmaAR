@@ -1598,14 +1598,14 @@ GameObject:
   - component: {fileID: 63690792}
   - component: {fileID: 63690797}
   - component: {fileID: 63690795}
-  - component: {fileID: 63690796}
+  - component: {fileID: 63690798}
   m_Layer: 0
   m_Name: marker-bebasair-7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &63690792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,7 +1700,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 63690796}
+  mPreview: {fileID: 63690798}
 --- !u!4 &63690794
 Transform:
   m_ObjectHideFlags: 0
@@ -1737,7 +1737,19 @@ MonoBehaviour:
         m_Calls: []
   animator: {fileID: 725270537}
   audioSource: {fileID: 1705230721}
---- !u!114 &63690796
+--- !u!114 &63690797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63690790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f590ac86a3433cf4e8d04a5468d32245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &63690798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1756,18 +1768,6 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 63690793}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
---- !u!114 &63690797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63690790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f590ac86a3433cf4e8d04a5468d32245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &75254004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2503,7 +2503,7 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
   - InteractionData: {fileID: 11400000, guid: e051895483ebc3345b4c7d6ff05fae95, type: 2}
-    IsNeedPlayerInputToContinue: 1
+    IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -2733,7 +2733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &135367194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3357,7 +3357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &179315076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9342,7 +9342,7 @@ GameObject:
   - component: {fileID: 591769539}
   - component: {fileID: 591769538}
   - component: {fileID: 591769537}
-  - component: {fileID: 591769536}
+  - component: {fileID: 591769541}
   m_Layer: 0
   m_Name: marker-kompleksometri-1
   m_TagString: Untagged
@@ -9350,25 +9350,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &591769536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591769535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 591769539}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Preparasi alat dan bahan - titrasi kompleksometri
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 591769539}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &591769537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9475,7 +9456,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 591769536}
+  mPreview: {fileID: 591769541}
 --- !u!4 &591769540
 Transform:
   m_ObjectHideFlags: 0
@@ -9502,6 +9483,25 @@ Transform:
   - {fileID: 1117042824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591769541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591769535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 591769539}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Preparasi alat dan bahan - titrasi kompleksometri
+  mDatasetName: 
+  mCastedBehaviour: {fileID: 591769539}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &592015945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11429,7 +11429,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - InteractionData: {fileID: 11400000, guid: b92f4cb7357f3f942818752aeae8d80c, type: 2}
-    IsNeedPlayerInputToContinue: 1
+    IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -13171,7 +13171,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - InteractionData: {fileID: 11400000, guid: f18062ca3e205114c89d06b9ee222827, type: 2}
-    IsNeedPlayerInputToContinue: 1
+    IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -16267,7 +16267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &977520212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20231,7 +20231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balanceObject: {fileID: 542902857}
-  targetWeight: 400
+  targetWeight: 50
   animator: {fileID: 871386558}
   animClipBalance: {fileID: 7400000, guid: 95f13f546bcc63d4d9da3be0783052cb, type: 2}
 --- !u!114 &1408983916
@@ -20975,7 +20975,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - InteractionData: {fileID: 11400000, guid: ceb13e9a8db96b343956c5153847c60f, type: 2}
-    IsNeedPlayerInputToContinue: 1
+    IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -21267,7 +21267,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - InteractionData: {fileID: 11400000, guid: 6c71bd7b086a8524e8ee4bfb98cb2066, type: 2}
-    IsNeedPlayerInputToContinue: 1
+    IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -22124,7 +22124,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - InteractionData: {fileID: 11400000, guid: dc13328067077a3439c10ca1070adda3, type: 2}
-    IsNeedPlayerInputToContinue: 1
+    IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -27138,7 +27138,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - InteractionData: {fileID: 11400000, guid: ffc4c4e4a7951774c89eaf304a54136b, type: 2}
-    IsNeedPlayerInputToContinue: 1
+    IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -28273,7 +28273,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - InteractionData: {fileID: 11400000, guid: 941275cd07f73ef45ae9f47179fc6351, type: 2}
-    IsNeedPlayerInputToContinue: 1
+    IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []

@@ -42,10 +42,6 @@ namespace Gameplay
         private void OnEnable()
         {
             currentInteractionIndex = 0;
-            // if (ScreenTapDetection.Instance)
-            // {
-            //     ScreenTapDetection.Instance.OnScreenTappedDelegate += OnScreenTapHandler;
-            // }
         }
 
         private void OnDisable()
@@ -56,10 +52,6 @@ namespace Gameplay
                 if (UIManager.Instance.btnPlayAnimation) UIManager.Instance.btnPlayAnimation.onClick.RemoveAllListeners();
                 if (UIManager.Instance.btnStopAnimation) UIManager.Instance.btnStopAnimation.onClick.RemoveAllListeners();
             }
-            // if (ScreenTapDetection.Instance)
-            // {
-            //     ScreenTapDetection.Instance.OnScreenTappedDelegate -= OnScreenTapHandler;
-            // }
         }
         
         [ContextMenu("Start Interaction")]
@@ -71,6 +63,12 @@ namespace Gameplay
         [ContextMenu("Continue Interaction")]
         public void ContinueInteraction()
         {
+            EnterInteractionState(currentInteractionIndex);
+        }
+
+        public void RestartInteraction()
+        {
+            isPlaying = false;
             EnterInteractionState(currentInteractionIndex);
         }
 
@@ -125,7 +123,8 @@ namespace Gameplay
             interactionDataActionMappings[currentInteractionIndex].UniqueEvent?.Invoke();
             interactionPlayer.Play(interactionDataActionMappings[currentInteractionIndex].InteractionData, () =>
             {
-                if (interactionDataActionMappings[currentInteractionIndex].IsNeedPlayerInputToContinue)
+                //bool isPlayingLastIndex = interactionDataActionMappings.Length - 1 == currentInteractionIndex;
+                if (interactionDataActionMappings[currentInteractionIndex].IsNeedPlayerInputToContinue)// && !isPlayingLastIndex)
                 {
                     OnStartWaitingForPlayerInputToContinue?.Invoke();
                     return;
@@ -195,6 +194,11 @@ namespace Gameplay
         private void RequestStopAnimation()
         {
             interactionPlayer.Stop();
+        }
+
+        public bool IsPlayingLastIndex()
+        {
+            return interactionDataActionMappings.Length - 1 == currentInteractionIndex;
         }
     }
 }

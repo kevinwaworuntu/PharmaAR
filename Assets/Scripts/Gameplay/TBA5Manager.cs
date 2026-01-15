@@ -64,11 +64,7 @@ namespace Gameplay
             {
                 yield return new WaitForSeconds(duration);
                 SetButtonEnabledState(true);
-                ContextualButtonController.Instance.DestroyButtons();
-                if (IsCurrentWeightComplete())
-                {
-                    OnStartWaitingForPlayerInputToContinueHandler();
-                }
+                OnStartWaitingForPlayerInputToContinueHandler();
             }
         }
         
@@ -92,7 +88,7 @@ namespace Gameplay
         
         private bool IsCurrentWeightComplete()
         {
-            return balanceObject.GetCurrentWeight() == targetWeight;
+            return Mathf.FloorToInt(balanceObject.GetCurrentWeight()) == Mathf.FloorToInt(targetWeight);
         }
         
         public void SetIsCheckWeightToContinue(bool value)
