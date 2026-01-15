@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 289698595187027659}
   - component: {fileID: 6737361059343616881}
   - component: {fileID: 6101230255062232063}
-  - component: {fileID: 9211300469836657201}
   - component: {fileID: 4883064123284454694}
   m_Layer: 0
   m_Name: AnimKompleksometri2
@@ -95,18 +94,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2953cd83c0cde2241a44b3bf91fe6beb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &9211300469836657201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7875161914749450170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f3a8576f23460449212b3a51f54995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &4883064123284454694
