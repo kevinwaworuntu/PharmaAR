@@ -42,6 +42,8 @@ namespace Gameplay
         private void OnEnable()
         {
             currentInteractionIndex = 0;
+            isStarted = false;
+            isPlaying = false;
         }
 
         private void OnDisable()

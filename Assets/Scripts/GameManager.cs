@@ -128,7 +128,33 @@ public class GameManager : MonoBehaviour
 
         SetARCameraActive(true);
     }
-    
+
+    public void BackFrromCurrentTahap()
+    {
+        if (currentAttemptingTahapIndex < 0)
+        {
+            Debug.LogWarning("[GameManager] CompleteCurrentTahap dipanggil tapi tidak ada tahap aktif.");
+            return;
+        }
+        switch (currentMode)
+        {
+            case GameMode.TBA:
+                if(currentAttemptingTahapIndex < markerTBAMapping.Length) markerTBAMapping[currentAttemptingTahapIndex].SetActive(false);
+                break;
+            case GameMode.Kompleksometri:
+                if(currentAttemptingTahapIndex < markerTKMapping.Length) markerTKMapping[currentAttemptingTahapIndex].SetActive(false);
+                break;
+        }
+        currentAttemptingTahapIndex = -1;
+        SetARCameraActive(false);
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ForceHideInfoPanel();
+            UIManager.Instance.GoBack();
+            UIManager.Instance.UpdateTahapButtonStates();
+        }
+    }
     public void CompleteCurrentTahap()
     {
         if (currentAttemptingTahapIndex < 0)
