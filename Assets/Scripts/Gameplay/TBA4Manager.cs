@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -25,8 +26,16 @@ namespace Gameplay
         
         private bool isCheckWeightToContinue;
         
+        private enum LarutanState
+        {
+            Larutan1,
+            Larutan2
+        }
+        private LarutanState currentLarutanState = LarutanState.Larutan1;
+        
         public void CreatePenambahanLarutanAnhidridaButton()
         {
+            currentLarutanState = LarutanState.Larutan1;
             currentTargetWeight = targetWeightAnhidrida;
             ContextualButtonController.Instance.GenerateContextualButton(2);
             
@@ -49,13 +58,14 @@ namespace Gameplay
                 
                 // Animasi tabung bertambah after dituangin pake coroutine aja
                 float fillValue = _fluidAnhidridaMaterial.GetFloat("_Fill");
-                _fluidAnhidridaMaterial.SetFloat("_Fill", fillValue + value10Ml);
+                _fluidBenzenaMaterial.SetFloat("_Fill", fillValue + value10Ml);
             });
            
         }
         
         public void CreatePenambahanLarutanBenzenaButton()
         {
+            currentLarutanState = LarutanState.Larutan2;
             currentTargetWeight = targetWeightBenzena;
             ContextualButtonController.Instance.GenerateContextualButton(2);
             
@@ -99,6 +109,21 @@ namespace Gameplay
         {
             return currentWeight > currentTargetWeight;
         }
+
+        private void RestartCurrentInteraction()
+        {
+            currentWeight = 0; 
+            if (currentLarutanState == LarutanState.Larutan1)
+            {
+                _fluidAnhidridaMaterial.SetFloat("_Fill", 0);
+            }
+            else if(currentLarutanState == LarutanState.Larutan2)
+            {
+                _fluidBenzenaMaterial.SetFloat("_Fill", 0);
+            }
+            ContextualButtonController.Instance.DestroyButtons();
+            tahapanInteractionController.RestartInteraction();
+        }
         
         private void PlayAnimation(AnimationClip clip)
         {
@@ -133,8 +158,7 @@ namespace Gameplay
                 }
                 if (IsCurrentWeightExceedTarget())
                 {
-                    currentWeight = 0; // Restart
-                    //Empty shader
+                   RestartCurrentInteraction();
                 }
             }
         }

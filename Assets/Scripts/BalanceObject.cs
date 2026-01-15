@@ -10,13 +10,13 @@ public class BalanceObject : MonoBehaviour
 
     private void OnEnable()
     {
-        displayText.SetText("0");
-        currentWeight = 0;
+        SetWeight(0);
     }
 
     public void SetWeight(float weight)
     {
         currentWeight = weight;
+        displayText.SetText(currentWeight.ToString());
     }
     
     public float GetCurrentWeight()
@@ -32,7 +32,7 @@ public class BalanceObject : MonoBehaviour
         }
         float start = currentWeight;
         float target = currentWeight + weight;
-        StartCoroutine(LerpValue(start, target, 1f, value =>
+        StartCoroutine(LerpValue(start, target, 0.1f, value =>
         {
             currentWeight = value;
             displayText.SetText($"{currentWeight:F1}");
@@ -48,7 +48,7 @@ public class BalanceObject : MonoBehaviour
         float start = currentWeight;
         float target = currentWeight - weight >= 0 ? currentWeight - weight : 0;
 
-        StartCoroutine(LerpValue(start, target, 1f, value =>
+        StartCoroutine(LerpValue(start, target, 0.1f, value =>
         {
             currentWeight = value;
             displayText.SetText($"{currentWeight:F1}");
