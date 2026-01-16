@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour
                 if(currentAttemptingTahapIndex < markerTKMapping.Length) markerTKMapping[currentAttemptingTahapIndex].SetActive(false);
                 break;
         }
+        animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = null;
         currentAttemptingTahapIndex = -1;
         SetARCameraActive(false);
 
@@ -171,7 +172,7 @@ public class GameManager : MonoBehaviour
                 if(currentAttemptingTahapIndex < markerTKMapping.Length) markerTKMapping[currentAttemptingTahapIndex].SetActive(false);
                 break;
         }
-        
+        animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = null;
         PlayerPrefs.SetInt(CurrentProgressKey, currentAttemptingTahapIndex);
         PlayerPrefs.Save();
 

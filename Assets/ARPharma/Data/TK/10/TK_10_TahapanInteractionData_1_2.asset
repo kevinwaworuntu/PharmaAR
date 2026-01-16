@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Step 2 Percobaan 1
   description: 'Tekan tombol penambahan volume yang sesuai untuk memulai proses titrasi
-    terhadap baku primer CaCO3!
+    terhadap baku primer CaCO<sub>3</sub>!
 
 '
   audioNaration: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
