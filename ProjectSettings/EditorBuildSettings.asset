@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ARPharma.unity
     guid: 3fee1d6f1664fe74191f5a79342ced72
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tes.unity
     guid: e8289b80c55f1dd4bb3c69116645c7b4
   m_configObjects:
