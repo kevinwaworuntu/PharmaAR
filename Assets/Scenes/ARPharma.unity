@@ -1986,6 +1986,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 1369046779}
+  buretRenderer: {fileID: 443362274160256497}
+  value01Ml: 0.0004
 --- !u!1 &108886650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,6 +2507,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 1, b: 0.065570354, a: 1}
   textSampelWeight: {fileID: 1369046779}
+  buretRenderer: {fileID: 2121138283}
+  value01Ml: 0.0004
 --- !u!1 &148338001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,6 +3230,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 1369046779}
+  buretRenderer: {fileID: 1869029597}
+  value01Ml: 0.0004
 --- !u!114 &179315082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6865,6 +6871,12 @@ PrefabInstance:
 --- !u!4 &565845333 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7093704636688453756, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 565845332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &565845334 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2476974087298611614, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
     type: 3}
   m_PrefabInstance: {fileID: 565845332}
   m_PrefabAsset: {fileID: 0}
@@ -11017,6 +11029,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 909539010}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &909539012 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8525310727519815099, guid: f25e18ad9e66a1c498088a20ab7e2220,
+    type: 3}
+  m_PrefabInstance: {fileID: 909539010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &921629535
 GameObject:
   m_ObjectHideFlags: 0
@@ -11543,6 +11561,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0.5157392, g: 1, b: 0, a: 1}
   textSampelWeight: {fileID: 1369046779}
+  buretRenderer: {fileID: 909539012}
+  value01Ml: 0.0004
 --- !u!1 &999607755
 GameObject:
   m_ObjectHideFlags: 0
@@ -14874,6 +14894,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 1369046779}
+  buretRenderer: {fileID: 3517587671129020796}
+  value01Ml: 0.0004
 --- !u!114 &1451963023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19063,6 +19085,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 1369046779}
+  buretRenderer: {fileID: 565845334}
+  value01Ml: 0.0004
 --- !u!1001 &1869029595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19134,6 +19158,12 @@ PrefabInstance:
 --- !u!4 &1869029596 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6787067149738513393, guid: b695a80f7b6c0124681f5d5f5cb6774e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1869029595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1869029597 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2901416131920557164, guid: b695a80f7b6c0124681f5d5f5cb6774e,
     type: 3}
   m_PrefabInstance: {fileID: 1869029595}
   m_PrefabAsset: {fileID: 0}
@@ -20237,7 +20267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1999526535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20477,13 +20507,13 @@ MonoBehaviour:
   currentTargetWeight: 0
   targetWeightLarutan1: 40
   targetWeightLarutan2: 80
-  animClipLarutan1_1ml: {fileID: 7400000, guid: ab4a0ff18520dd044aa0eb0cce567861,
+  animClipLarutan1_1ml: {fileID: 7400000, guid: e3272b4e906942e489008024ae78741f,
     type: 2}
-  animClipLarutan1_10ml: {fileID: 7400000, guid: ab4a0ff18520dd044aa0eb0cce567861,
+  animClipLarutan1_10ml: {fileID: 7400000, guid: e3272b4e906942e489008024ae78741f,
     type: 2}
-  animClipLarutan2_1ml: {fileID: 7400000, guid: a8cbf2d95d0a7544fa3d922b8fb56680,
+  animClipLarutan2_1ml: {fileID: 7400000, guid: 99681900dad8655468d5722f89247680,
     type: 2}
-  animClipLarutan2_10ml: {fileID: 7400000, guid: a8cbf2d95d0a7544fa3d922b8fb56680,
+  animClipLarutan2_10ml: {fileID: 7400000, guid: 99681900dad8655468d5722f89247680,
     type: 2}
   animator: {fileID: 1351317245}
   larutan1Renderer: {fileID: 626653259}
@@ -21048,6 +21078,12 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 2121138280}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &2121138283 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7343202932623283195, guid: 16355c58438d32c4b9243d00b8a7576f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121138280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2127098565
 GameObject:
   m_ObjectHideFlags: 0
@@ -21322,6 +21358,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bcdceb273398d14b80b1d1ef415ed75, type: 3}
+--- !u!23 &443362274160256497 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7457598989487664299, guid: 0bcdceb273398d14b80b1d1ef415ed75,
+    type: 3}
+  m_PrefabInstance: {fileID: 443362274160256496}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1129233140714235327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21604,6 +21646,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e28e81723b0dbe4b9a7287be9e84b14, type: 3}
+--- !u!23 &3517587671129020796 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2476974087298611614, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
+    type: 3}
+  m_PrefabInstance: {fileID: 3517587671129020795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4214659927744032033
 PrefabInstance:
   m_ObjectHideFlags: 0
