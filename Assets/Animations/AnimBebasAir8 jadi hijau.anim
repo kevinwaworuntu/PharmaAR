@@ -43,7 +43,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Side_Color.r
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -73,7 +73,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Side_Color.g
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -103,7 +103,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Side_Color.b
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -133,7 +133,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Side_Color.a
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -163,7 +163,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._TopColor.r
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -193,7 +193,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._TopColor.g
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -223,7 +223,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._TopColor.b
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -253,7 +253,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._TopColor.a
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -266,7 +266,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1042943115
+      path: 2802709022
       attribute: 1130394987
       script: {fileID: 0}
       typeID: 23
@@ -275,7 +275,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1042943115
+      path: 2802709022
       attribute: 1398830443
       script: {fileID: 0}
       typeID: 23
@@ -284,7 +284,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1042943115
+      path: 2802709022
       attribute: 1667265899
       script: {fileID: 0}
       typeID: 23
@@ -293,7 +293,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1042943115
+      path: 2802709022
       attribute: 1307035144
       script: {fileID: 0}
       typeID: 23
@@ -302,7 +302,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1042943115
+      path: 2802709022
       attribute: 1575470600
       script: {fileID: 0}
       typeID: 23
@@ -311,7 +311,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1042943115
+      path: 2802709022
       attribute: 1843906056
       script: {fileID: 0}
       typeID: 23
@@ -320,7 +320,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1042943115
+      path: 2802709022
       attribute: 1935701355
       script: {fileID: 0}
       typeID: 23
@@ -329,7 +329,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1042943115
+      path: 2802709022
       attribute: 2112341512
       script: {fileID: 0}
       typeID: 23
@@ -385,7 +385,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Side_Color.r
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -415,7 +415,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Side_Color.g
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -445,7 +445,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Side_Color.b
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -475,7 +475,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._Side_Color.a
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -505,7 +505,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._TopColor.r
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -535,7 +535,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._TopColor.g
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -565,7 +565,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._TopColor.b
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0
@@ -595,7 +595,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material._TopColor.a
-    path: erlenmeyer baku primer/erlenmeyer fluid
+    path: erlenmeyer/erlenmeyer fluid
     classID: 23
     script: {fileID: 0}
     flags: 0

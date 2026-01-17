@@ -15,4 +15,4 @@ MonoBehaviour:
   title: Alat
   description: Buret, corong kaca, Erlenmeyer, gelas beaker, gelas ukur
   audioNaration: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  animationClip: {fileID: 7400000, guid: e13d3aff9b7c5c745a4b7475f478ad3c, type: 2}
+  animationClip: {fileID: 7400000, guid: 55c1e8df17ae90b4d8b714a2b3bd35fc, type: 2}

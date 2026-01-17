@@ -15,4 +15,4 @@ MonoBehaviour:
   title: Bahan
   description: Aquades, indikator biru hidroksinaftol, NaOH 1 N
   audioNaration: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  animationClip: {fileID: 7400000, guid: e13d3aff9b7c5c745a4b7475f478ad3c, type: 2}
+  animationClip: {fileID: 7400000, guid: d55ce40a1e8c79046b7fc0c97d068f6e, type: 2}

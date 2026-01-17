@@ -15,4 +15,4 @@ MonoBehaviour:
   title: Bahan
   description: Aseton, Baku primer kalium biftalat, Benzena
   audioNaration: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  animationClip: {fileID: 7400000, guid: fc6b283035aae1441b50628da24fc07b, type: 2}
+  animationClip: {fileID: 7400000, guid: 2d45a4bbf3c4a0949b66dccf373fd0f1, type: 2}
