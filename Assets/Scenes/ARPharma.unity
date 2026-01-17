@@ -14893,6 +14893,12 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1451963018}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!23 &1454995935 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1220168540176611484, guid: 1d6e116cdb1c55348acad46535146464,
+    type: 3}
+  m_PrefabInstance: {fileID: 1986762607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1474967335
 GameObject:
   m_ObjectHideFlags: 0
@@ -16029,8 +16035,8 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: 4469e80f57968cd4f96a15cd754a98a4,
     type: 2}
   animator: {fileID: 1986762609}
-  larutan1Renderer: {fileID: 0}
-  larutan2Renderer: {fileID: 0}
+  larutan1Renderer: {fileID: 1454995935}
+  larutan2Renderer: {fileID: 1592095489}
   value1Ml: 0.0008
   value10Ml: 0.008
 --- !u!114 &1489822896
@@ -16422,6 +16428,12 @@ Transform:
   - {fileID: 1705230722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1592095489 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1092452694802437487, guid: 1d6e116cdb1c55348acad46535146464,
+    type: 3}
+  m_PrefabInstance: {fileID: 1986762607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1606882368 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3417427139710361048, guid: 16355c58438d32c4b9243d00b8a7576f,

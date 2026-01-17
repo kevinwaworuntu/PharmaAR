@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UI;
@@ -27,13 +28,29 @@ namespace Gameplay
         
         [SerializeField] protected TextMeshProUGUI textSampelWeight;
         
+        [Header("SHADER EFFECTS SETTINGS")]
+        [SerializeField] private Renderer buretRenderer;
+        
+        private Material buretMaterial;
+
+        private float startingBuretFilledValue = 0.1775f;
+        [SerializeField] protected float value01Ml = 0.0004f;
+        
         private bool isPlaying = false;
         protected bool isCheckWeightToContinue;
+
+        private void Awake()
+        {
+            buretMaterial = buretRenderer.material;     
+            titrasiMatInstance = titrasiRenderer.material;
+        }
 
         private void OnEnable()
         {
             base.OnEnable();
-            titrasiMatInstance = titrasiRenderer.material;
+         
+            SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
+         
             titrasiMatInstance.SetColor("_Side_Color", initialColor);
             titrasiMatInstance.SetColor("_TopColor", initialColor);
         }
@@ -87,6 +104,8 @@ namespace Gameplay
             currentWeight = 0; 
             titrasiMatInstance.SetColor("_Side_Color", initialColor);
             titrasiMatInstance.SetColor("_TopColor", initialColor);
+            
+            SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
             ContextualButtonController.Instance.DestroyButtons();
             tahapanInteractionController.RestartInteraction();
         }
@@ -96,6 +115,8 @@ namespace Gameplay
             SetSampelWeightTextVisible(); // Temporary here
             titrasiMatInstance.SetColor("_Side_Color", initialColor);
             titrasiMatInstance.SetColor("_TopColor", initialColor);
+            
+            SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
             
             ContextualButtonController.Instance.GenerateContextualButton(2);
             
@@ -142,6 +163,7 @@ namespace Gameplay
                     animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = animClipTetes;
                 }
                 animator.SetTrigger(animationConfig.PlayAnimationParamName);
+                SetLarutanFilledValue(buretMaterial, GetLarutanFilledValue(buretMaterial) + value01Ml);
                 yield return new WaitForSeconds(animClipTetes.length);
             }
             
@@ -175,9 +197,32 @@ namespace Gameplay
             StartCoroutine(DelaySetSampelWeight());
             IEnumerator DelaySetSampelWeight() // Wait for current index updated
             {
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(2f);
                 textSampelWeight.SetText($"{weights[currentIndex]} mg");
                 textSampelWeight.gameObject.SetActive(true);
+            }
+        }
+        protected float GetLarutanFilledValue(Material targetMaterial)
+        {
+            float fillValue = 0;
+            if (targetMaterial)
+            {
+                if(targetMaterial.HasProperty("_Fill"))
+                {
+                    fillValue = targetMaterial.GetFloat("_Fill");
+                }
+            }
+            return fillValue;
+        }
+
+        protected void SetLarutanFilledValue(Material targetMaterial, float value)
+        {
+            if (targetMaterial)
+            {
+                if (targetMaterial.HasProperty("_Fill"))
+                {
+                    targetMaterial.SetFloat("_Fill", value);
+                }
             }
         }
     }

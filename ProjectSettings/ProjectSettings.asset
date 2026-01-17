@@ -962,6 +962,10 @@ PlayerSettings:
   syncCapabilities: 0
   platformCapabilities:
     WindowsStoreApps:
+<<<<<<< Updated upstream
+=======
+      EnterpriseAuthentication: False
+>>>>>>> Stashed changes
       OfflineMapsManagement: False
       HumanInterfaceDevice: False
       Location: False
@@ -996,9 +1000,15 @@ PlayerSettings:
       RecordedCallsFolder: False
       Contacts: False
       InternetClient: True
+<<<<<<< Updated upstream
       Proximity: False
       CodeGeneration: False
       EnterpriseAuthentication: False
+=======
+      CodeGeneration: False
+      BackgroundMediaPlayback: False
+      Proximity: False
+>>>>>>> Stashed changes
   metroTargetDeviceFamilies:
     Desktop: False
     Holographic: False
