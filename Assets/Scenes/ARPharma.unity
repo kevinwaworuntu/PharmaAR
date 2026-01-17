@@ -1164,7 +1164,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: ef3d053a9562d9145979e20b1000d177, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 039f86dd082641a49bb567ae404bb88f, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1389,7 +1389,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: c3ad20d663e84b546a2ad20859320d52, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 1c32590df76c76f4c99b4ab46d9de1ad, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 5c11e653040f12242a208e4ce4bad255, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 8beb7a5a8ef6bce48904461259dbee6c, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -2265,7 +2265,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 0}
+  mRuntimeTexture: {fileID: 2800000, guid: a5e495f92cb2191469a41d9d19eab5fe, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -3005,7 +3005,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: e2fb839a4a669d74bb24281bc3f9b59c, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 1d52fe9f04b33b34abf8f82cb51ddee1, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -3569,7 +3569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a4804e848bbe87f4899d255174be6119, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ee1ba7eb136c8345b3dbd8ca9f57fdf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4113,7 +4113,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: a5d191fe4ddee124486ffcf2a6f35fc3, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 7a973d0a75ca3464b943c6c16598e222, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -6991,7 +6991,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 90e3e6b6788162146bf5ef158234d549, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: a2f301c3714686a4d85b2a2962703b47, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -8033,7 +8033,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 5bf2e95d4ee9edd49a4feb077b003d87, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: a80ec2eb549c93545806e929be8f88f4, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -8229,7 +8229,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: f6198838000c9dd4587770dced353a00, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: ab5d78fb615bda4489d1dddb9f217fe2, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -9817,9 +9817,9 @@ MonoBehaviour:
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
-  mWidth: 0.2
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: f7be62547c821e44cba2d0ae00f438a5, type: 3}
+  mWidth: 0.19999999
+  mHeight: 0.19999999
+  mRuntimeTexture: {fileID: 2800000, guid: 24c8746e6821a294e8b90669a220a149, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -11423,7 +11423,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 6eff8ecbe121b9245ac5b472cf27632a, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 1dc4208f5b5ba774a9c6f709c688075f, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -13958,7 +13958,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 128a0f265e378bf46a24532b548a4613, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 1a0ffe6ab6775cd479ad6e519136dc90, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -14653,7 +14653,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 79f25df4d66e39f42b9531540252c42c, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 80bd22d09e875aa4da3d3baefda59099, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -15004,7 +15004,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: fe3d4ea19199fd5479bbd42af3a7ff47, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: a2cfb272565da324f918c1f9948fabff, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -15654,7 +15654,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 02c4242ae44401040a0b9fce93d613d4, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: d00ecd2c6e5afb64abd0639b19696bf5, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -15892,7 +15892,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 1710acb4dace46c41bce496dfea71748, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: ddb3f4f394351564281c5944a4822c06, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -18813,7 +18813,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 8b30deea9712da74e9bf5155f62cd174, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: b82b0fde99a1f8e4a910c2d938293f96, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -19431,7 +19431,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 9a432e6794ae9b240befd012c46254b3, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 220447625c492134aba67fddb1ab74e5, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -20243,7 +20243,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: fe4d959ca371728458b042498401c21b, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 73237c75531c353458c8c200c336a716, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -21328,7 +21328,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: a25787e29733cac4e89912e402c1605c, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 0336ad111ea2a434e9c8641024a0b607, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -22241,31 +22241,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1483907618}
     m_Modifications:
-    - target: {fileID: 1844423312035169796, guid: ccb5c7dbf73b16648ae4268980f374e7,
-        type: 3}
-      propertyPath: m_Name
-      value: ContextualButtonController
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288477994574794639, guid: ccb5c7dbf73b16648ae4268980f374e7,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288477994574794639, guid: ccb5c7dbf73b16648ae4268980f374e7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288477994574794639, guid: ccb5c7dbf73b16648ae4268980f374e7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -94
-      objectReference: {fileID: 0}
-    - target: {fileID: 5682784578357493181, guid: ccb5c7dbf73b16648ae4268980f374e7,
-        type: 3}
-      propertyPath: m_ChildAlignment
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7991132635665300088, guid: ccb5c7dbf73b16648ae4268980f374e7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -22370,11 +22345,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CanvasContextualAction
-      objectReference: {fileID: 0}
-    - target: {fileID: 8125708218495114834, guid: ccb5c7dbf73b16648ae4268980f374e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
