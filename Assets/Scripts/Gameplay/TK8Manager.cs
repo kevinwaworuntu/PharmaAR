@@ -198,8 +198,9 @@ namespace Gameplay
             IEnumerator DelaySetSampelWeight() // Wait for current index updated
             {
                 yield return new WaitForSeconds(2f);
-                textSampelWeight.SetText($"{weights[currentIndex]} mg");
                 textSampelWeight.gameObject.SetActive(true);
+                textSampelWeight.SetText($"{weights[currentIndex]} mg");
+           
             }
         }
         protected float GetLarutanFilledValue(Material targetMaterial)
