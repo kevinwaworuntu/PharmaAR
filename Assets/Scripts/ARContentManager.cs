@@ -82,6 +82,7 @@ public class ARContentManager : MonoBehaviour
         {
             return;
         }
+        UIManager.Instance.NarationPanel.gameObject.SetActive(false);
         UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(true);
         UIManager.Instance.btnNextInteraction.gameObject.SetActive(false);
 

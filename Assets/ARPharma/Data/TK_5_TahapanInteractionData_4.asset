@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TK_5_TahapanInteractionData_4
   m_EditorClassIdentifier: 
   title: 'Step 3 interaction '
-  description: Tekan tombol yang sesuai untuk menimbang 200 mg sampel CaCO3!
+  description: Tekan tombol yang sesuai untuk menimbang 200 mg sampel CaCO<sub>3</sub>!
   audioNaration: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
   animationClip: {fileID: 0}

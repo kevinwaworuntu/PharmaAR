@@ -118,7 +118,7 @@ Bahan:
 - larutan NaOH 1N
 - larutan HCl 3N
 - larutan standar EDTA 0,05M 
-- Serbuk sampel CaCO3",
+- Serbuk sampel CaCO<sub>3</sub>",
 
              
         @"Preparasi Buret\n
@@ -127,7 +127,7 @@ Bahan:
 
              
         @"Preparasi Larutan Baku Primer\n
-1. Masukkan 200 mg baku primer CaCO3 ke dalam Erlenmeyer!
+1. Masukkan 200 mg baku primer CaCO<sub>3</sub> ke dalam Erlenmeyer!
 2. Masukkan 10 mL aquades ke dalam Erlenmeyer!
 3. Masukkan 2 mL HCl 1 N ke dalam Erlenmeyer!
 4. Aduk Erlenmeyer!
@@ -146,7 +146,7 @@ Bahan:
 
              
         @"Penimbangan Sampel\n
-1. Timbang sebanyak 200 mg sampel CaCO3!",
+1. Timbang sebanyak 200 mg sampel CaCO<sub>3</sub>!",
 
              
         @"Preparasi Larutan Sampel\n
@@ -165,7 +165,7 @@ Bahan:
              
         @"Simulasi Pembakuan Secara Triplo (3x)\n
 1. Perhatikan dan catat volume awal buret sebelum titrasi pada activity book!
-2. Lakukan titrasi terhadap larutan baku primer CaCO3!
+2. Lakukan titrasi terhadap larutan baku primer CaCO<sub>3</sub>!
 3. Perhatikan dan catat volume akhir buret setelah titrasi pada activity book!",
 
              
@@ -177,7 +177,7 @@ Bahan:
              
         @"Simulasi Titrasi Sampel Secara Triplo (3x)\n
 1. Perhatikan dan catat volume awal buret sebelum titrasi pada activity book!
-2. Lakukan titrasi terhadap larutan sampel CaCO3!
+2. Lakukan titrasi terhadap larutan sampel CaCO<sub>3</sub>!
 3. Perhatikan dan catat volume akhir buret setelah titrasi pada activity book!"
     };
 

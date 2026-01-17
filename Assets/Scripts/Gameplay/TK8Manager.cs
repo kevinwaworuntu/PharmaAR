@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UI;
 using UnityEngine;
 
@@ -6,9 +8,12 @@ namespace Gameplay
 {
     public class TK8Manager : ARContentManager
     {
-        public float floorTarget = 10;
-        public float ceilTarget = 10.2f;
-        public float currentWeight = 0;
+        [SerializeField] private float[] weights;
+        [SerializeField] private float[] floorTargets;
+        [SerializeField] private float[] ceilTargets;
+
+        private float currentWeight = 0;
+        private int currentIndex; // get better naming
         
         [SerializeField] protected AnimationClip animClipOpenKeran;
         [SerializeField] protected AnimationClip animClipCloseKeran;
@@ -19,6 +24,8 @@ namespace Gameplay
         private Material titrasiMatInstance;
         [SerializeField] protected Color initialColor;
         [SerializeField] protected Color targetColor;
+        
+        [SerializeField] protected TextMeshProUGUI textSampelWeight;
         
         private bool isPlaying = false;
         protected bool isCheckWeightToContinue;
@@ -31,27 +38,19 @@ namespace Gameplay
             titrasiMatInstance.SetColor("_TopColor", initialColor);
         }
 
-        [ContextMenu("TestGantiWarna 1")]
-        protected void TestGantiWarna1()
+        public void SetCurrentWeightIndex(int value)
         {
-            titrasiMatInstance.SetColor("_Side_Color", initialColor);
-            titrasiMatInstance.SetColor("_TopColor", initialColor);
-        }
-        [ContextMenu("TestGantiWarna 2")]
-        protected void TestGantiWarna2()
-        {
-            titrasiMatInstance.SetColor("_Side_Color", targetColor);
-            titrasiMatInstance.SetColor("_TopColor", targetColor);
+            currentIndex = value;
         }
         
         protected bool IsCurrentWeightComplete()
         {
-            return currentWeight >= floorTarget && currentWeight <= ceilTarget;
+            return currentWeight >= floorTargets[currentIndex] && currentWeight <= ceilTargets[currentIndex];
         }
         
         protected bool IsCurrentWeightExceedTarget()
         {
-            return currentWeight > ceilTarget;
+            return currentWeight > ceilTargets[currentIndex];
         }
         
         protected void SetButtonEnabledState(bool enabled)
@@ -73,10 +72,9 @@ namespace Gameplay
             }
             currentWeight = 0;
             ContextualButtonController.Instance.DestroyButtons();
-            titrasiMatInstance.SetColor("_Side_Color", initialColor);
-            titrasiMatInstance.SetColor("_TopColor", initialColor);
             base.OnStartWaitingForPlayerInputToContinueHandler();
             SetIsCheckWeightToContinue(false);
+            textSampelWeight.gameObject.SetActive(false);
         }
         
         public void SetIsCheckWeightToContinue(bool value)
@@ -92,18 +90,13 @@ namespace Gameplay
             ContextualButtonController.Instance.DestroyButtons();
             tahapanInteractionController.RestartInteraction();
         }
-
-        public void SetCeilTarget(float value)
-        {
-            ceilTarget = value;
-        }
-        public void SetFloorTarget(float value)
-        {
-            floorTarget = value;
-        }
-
+        
         public void CreateButtonInteraction()
         {
+            SetSampelWeightTextVisible(); // Temporary here
+            titrasiMatInstance.SetColor("_Side_Color", initialColor);
+            titrasiMatInstance.SetColor("_TopColor", initialColor);
+            
             ContextualButtonController.Instance.GenerateContextualButton(2);
             
             ContextualButtonController.Instance.RegisterTextToButton(0, "0.1 ml");
@@ -159,8 +152,13 @@ namespace Gameplay
             isPlaying = false;
             if (IsCurrentWeightComplete())
             {
-                titrasiMatInstance.SetColor("_Side_Color", targetColor);
-                titrasiMatInstance.SetColor("_TopColor", targetColor);
+                StartCoroutine(DelaySetTargetColor());
+                IEnumerator DelaySetTargetColor()
+                {
+                    yield return new WaitForSeconds(1);
+                    titrasiMatInstance.SetColor("_Side_Color", targetColor);
+                    titrasiMatInstance.SetColor("_TopColor", targetColor);
+                }
                 OnStartWaitingForPlayerInputToContinueHandler();
             }
             else
@@ -169,6 +167,17 @@ namespace Gameplay
                 {
                     RestartCurrentInteraction();
                 }
+            }
+        }
+
+        public void SetSampelWeightTextVisible()
+        {
+            StartCoroutine(DelaySetSampelWeight());
+            IEnumerator DelaySetSampelWeight() // Wait for current index updated
+            {
+                yield return new WaitForSeconds(0.5f);
+                textSampelWeight.SetText($"{weights[currentIndex]} mg");
+                textSampelWeight.gameObject.SetActive(true);
             }
         }
     }
