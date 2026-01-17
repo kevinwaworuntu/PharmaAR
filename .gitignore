@@ -85,7 +85,6 @@ Assets/SamplesResources/**
 # -----------------------------------------------------------------------
 
 # Gambar preview yang dihasilkan editor (opsional)
-*.png.meta
-*.jpg.meta
+
 
 # (Default: Unity pakai Visible Meta Files, jadi tidak perlu aturan khusus)
