@@ -4329,12 +4329,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 75254009}
     m_Modifications:
-    - target: {fileID: 289698595187027659, guid: 16f028fd3a11d08478ab38284a2326d1,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 655f0a184bc0f8542bbbd2d6d4a86b04,
-        type: 2}
     - target: {fileID: 3306281905764405289, guid: 16f028fd3a11d08478ab38284a2326d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6085,12 +6079,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 660589477}
     m_Modifications:
-    - target: {fileID: 1212060306103627768, guid: f702ea170ee46154b8ffe352ad8767b4,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 655f0a184bc0f8542bbbd2d6d4a86b04,
-        type: 2}
     - target: {fileID: 2160823077423186549, guid: f702ea170ee46154b8ffe352ad8767b4,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -7562,6 +7550,18 @@ PrefabInstance:
 --- !u!4 &626653257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3759076688289342629, guid: daad4a153976f1844b12e1feb7869772,
+    type: 3}
+  m_PrefabInstance: {fileID: 626653256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &626653258 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4423122180961485172, guid: daad4a153976f1844b12e1feb7869772,
+    type: 3}
+  m_PrefabInstance: {fileID: 626653256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &626653259 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1337581790764722957, guid: daad4a153976f1844b12e1feb7869772,
     type: 3}
   m_PrefabInstance: {fileID: 626653256}
   m_PrefabAsset: {fileID: 0}
@@ -15180,20 +15180,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTargetWeight: 0
-  targetWeightAnhidrida: 100
-  targetWeightBenzena: 15
-  animClipAnhidrida_1ml: {fileID: 7400000, guid: 1b87b52dbade1cf4f866aa81f6f19042,
+  targetWeightLarutan1: 40
+  targetWeightLarutan2: 80
+  animClipLarutan1_1ml: {fileID: 7400000, guid: 1b87b52dbade1cf4f866aa81f6f19042,
     type: 2}
-  animClipAnhidrida_10ml: {fileID: 7400000, guid: 1b87b52dbade1cf4f866aa81f6f19042,
+  animClipLarutan1_10ml: {fileID: 7400000, guid: 1b87b52dbade1cf4f866aa81f6f19042,
     type: 2}
-  animClipBenzena_1ml: {fileID: 7400000, guid: c974a48ca0bf772449e4965dcfe3f31d, type: 2}
-  animClipBenzena_10ml: {fileID: 7400000, guid: c974a48ca0bf772449e4965dcfe3f31d,
+  animClipLarutan2_1ml: {fileID: 7400000, guid: c974a48ca0bf772449e4965dcfe3f31d,
+    type: 2}
+  animClipLarutan2_10ml: {fileID: 7400000, guid: c974a48ca0bf772449e4965dcfe3f31d,
     type: 2}
   animator: {fileID: 1505310479}
-  _fluidAnhidridaMaterial: {fileID: 2100000, guid: c75683e9d30429b4a85875f93632d935,
-    type: 2}
-  _fluidBenzenaMaterial: {fileID: 2100000, guid: 4c1e6460dbd701043be9a6d08aa622c1,
-    type: 2}
+  larutan1Renderer: {fileID: 1129233140714235329}
+  larutan2Renderer: {fileID: 1129233140714235328}
   value1Ml: 0.0008
   value10Ml: 0.008
 --- !u!1 &1476330383
@@ -16019,20 +16018,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTargetWeight: 0
-  targetWeightAnhidrida: 40
-  targetWeightBenzena: 80
-  animClipAnhidrida_1ml: {fileID: 7400000, guid: 854fdfe2558f9bd458cd38e1a6bc4df1,
+  targetWeightLarutan1: 40
+  targetWeightLarutan2: 80
+  animClipLarutan1_1ml: {fileID: 7400000, guid: 854fdfe2558f9bd458cd38e1a6bc4df1,
     type: 2}
-  animClipAnhidrida_10ml: {fileID: 7400000, guid: 854fdfe2558f9bd458cd38e1a6bc4df1,
+  animClipLarutan1_10ml: {fileID: 7400000, guid: 854fdfe2558f9bd458cd38e1a6bc4df1,
     type: 2}
-  animClipBenzena_1ml: {fileID: 7400000, guid: 4469e80f57968cd4f96a15cd754a98a4, type: 2}
-  animClipBenzena_10ml: {fileID: 7400000, guid: 4469e80f57968cd4f96a15cd754a98a4,
+  animClipLarutan2_1ml: {fileID: 7400000, guid: 4469e80f57968cd4f96a15cd754a98a4,
+    type: 2}
+  animClipLarutan2_10ml: {fileID: 7400000, guid: 4469e80f57968cd4f96a15cd754a98a4,
     type: 2}
   animator: {fileID: 1986762609}
-  _fluidAnhidridaMaterial: {fileID: 2100000, guid: c75683e9d30429b4a85875f93632d935,
-    type: 2}
-  _fluidBenzenaMaterial: {fileID: 2100000, guid: ffb6ee9d42a09e748bd19683a07085b0,
-    type: 2}
+  larutan1Renderer: {fileID: 0}
+  larutan2Renderer: {fileID: 0}
   value1Ml: 0.0008
   value10Ml: 0.008
 --- !u!114 &1489822896
@@ -19918,6 +19916,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimBebasAir4
       objectReference: {fileID: 0}
+    - target: {fileID: 2337587323288451728, guid: 1d6e116cdb1c55348acad46535146464,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4073040041632989232, guid: 1d6e116cdb1c55348acad46535146464,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20390,20 +20393,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTargetWeight: 0
-  targetWeightAnhidrida: 40
-  targetWeightBenzena: 80
-  animClipAnhidrida_1ml: {fileID: 7400000, guid: ab4a0ff18520dd044aa0eb0cce567861,
+  targetWeightLarutan1: 40
+  targetWeightLarutan2: 80
+  animClipLarutan1_1ml: {fileID: 7400000, guid: ab4a0ff18520dd044aa0eb0cce567861,
     type: 2}
-  animClipAnhidrida_10ml: {fileID: 7400000, guid: ab4a0ff18520dd044aa0eb0cce567861,
+  animClipLarutan1_10ml: {fileID: 7400000, guid: ab4a0ff18520dd044aa0eb0cce567861,
     type: 2}
-  animClipBenzena_1ml: {fileID: 7400000, guid: a8cbf2d95d0a7544fa3d922b8fb56680, type: 2}
-  animClipBenzena_10ml: {fileID: 7400000, guid: a8cbf2d95d0a7544fa3d922b8fb56680,
+  animClipLarutan2_1ml: {fileID: 7400000, guid: a8cbf2d95d0a7544fa3d922b8fb56680,
+    type: 2}
+  animClipLarutan2_10ml: {fileID: 7400000, guid: a8cbf2d95d0a7544fa3d922b8fb56680,
     type: 2}
   animator: {fileID: 1351317245}
-  _fluidAnhidridaMaterial: {fileID: 2100000, guid: c75683e9d30429b4a85875f93632d935,
-    type: 2}
-  _fluidBenzenaMaterial: {fileID: 2100000, guid: ffb6ee9d42a09e748bd19683a07085b0,
-    type: 2}
+  larutan1Renderer: {fileID: 626653259}
+  larutan2Renderer: {fileID: 626653258}
   value1Ml: 0.0008
   value10Ml: 0.008
 --- !u!114 &1999526541
@@ -21306,6 +21308,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1383644401e5bf8409c585463afd807b, type: 3}
+--- !u!23 &1129233140714235328 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3781823838994628874, guid: 1383644401e5bf8409c585463afd807b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1129233140714235327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1129233140714235329 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1079401267957660700, guid: 1383644401e5bf8409c585463afd807b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1129233140714235327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1208402446159745606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21448,11 +21462,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1451963019}
     m_Modifications:
-    - target: {fileID: 779033394730817121, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6378290267242157323, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
         type: 3}
       propertyPath: m_Name
@@ -22078,20 +22087,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTargetWeight: 0
-  targetWeightAnhidrida: 100
-  targetWeightBenzena: 15
-  animClipAnhidrida_1ml: {fileID: 7400000, guid: 8c0302c309bc65444be3d85cf79478b2,
+  targetWeightLarutan1: 40
+  targetWeightLarutan2: 80
+  animClipLarutan1_1ml: {fileID: 7400000, guid: 8c0302c309bc65444be3d85cf79478b2,
     type: 2}
-  animClipAnhidrida_10ml: {fileID: 7400000, guid: 8c0302c309bc65444be3d85cf79478b2,
+  animClipLarutan1_10ml: {fileID: 7400000, guid: 8c0302c309bc65444be3d85cf79478b2,
     type: 2}
-  animClipBenzena_1ml: {fileID: 7400000, guid: b914157045593dc40b8d1f962835fc08, type: 2}
-  animClipBenzena_10ml: {fileID: 7400000, guid: b914157045593dc40b8d1f962835fc08,
+  animClipLarutan2_1ml: {fileID: 7400000, guid: b914157045593dc40b8d1f962835fc08,
+    type: 2}
+  animClipLarutan2_10ml: {fileID: 7400000, guid: b914157045593dc40b8d1f962835fc08,
     type: 2}
   animator: {fileID: 2117592902207494865}
-  _fluidAnhidridaMaterial: {fileID: 2100000, guid: c75683e9d30429b4a85875f93632d935,
-    type: 2}
-  _fluidBenzenaMaterial: {fileID: 2100000, guid: ffb6ee9d42a09e748bd19683a07085b0,
-    type: 2}
+  larutan1Renderer: {fileID: 8282437265113007011}
+  larutan2Renderer: {fileID: 8282437265113007010}
   value1Ml: 0.0008
   value10Ml: 0.008
 --- !u!4 &5587039165051204351 stripped
@@ -22465,6 +22473,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3108b47f9439f244829440af0ece6e6, type: 3}
+--- !u!23 &8282437265113007010 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1523046379579689666, guid: f3108b47f9439f244829440af0ece6e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8282437265113007009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8282437265113007011 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8605637039256769440, guid: f3108b47f9439f244829440af0ece6e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8282437265113007009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9172881502959440759
 RectTransform:
   m_ObjectHideFlags: 0

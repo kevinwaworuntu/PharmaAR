@@ -8,19 +8,29 @@ namespace Gameplay
 {
     public class TBA4Manager : ARContentManager
     {
+    
         protected int currentWeight;
+        
+        [Header("TARGET VOLUME")]
         public int currentTargetWeight;
-        public int targetWeightAnhidrida = 40;
-        public int targetWeightBenzena = 80;
+        public int targetWeightLarutan1 = 40;
+        public int targetWeightLarutan2 = 80;
 
-        [SerializeField] protected AnimationClip animClipAnhidrida_1ml;
-        [SerializeField] protected AnimationClip animClipAnhidrida_10ml;
-        [SerializeField] protected AnimationClip animClipBenzena_1ml;
-        [SerializeField] protected AnimationClip animClipBenzena_10ml;
+        [Header("ANIMATION")]
+        [FormerlySerializedAs("animClipAnhidrida_1ml")] [SerializeField] protected AnimationClip animClipLarutan1_1ml;
+        [FormerlySerializedAs("animClipAnhidrida_10ml")] [SerializeField] protected AnimationClip animClipLarutan1_10ml;
+        
+        [FormerlySerializedAs("animClipBenzena_1ml")] [SerializeField] protected AnimationClip animClipLarutan2_1ml;
+        [FormerlySerializedAs("animClipBenzena_10ml")] [SerializeField] protected AnimationClip animClipLarutan2_10ml;
         [SerializeField] protected Animator animator;
         
-        [FormerlySerializedAs("_fluidMaterial")] [SerializeField] private Material _fluidAnhidridaMaterial;
-        [SerializeField] protected Material _fluidBenzenaMaterial;
+        [Header("SHADER EFFECTS SETTINGS")]
+        [SerializeField] private Renderer larutan1Renderer;
+        [SerializeField] private Renderer larutan2Renderer;
+        
+        private Material larutan1Material;
+        private Material larutan2Material;
+        
         [SerializeField] protected float value1Ml = 0.0008f;
         [SerializeField] protected float value10Ml = 0.008f;
         
@@ -32,33 +42,43 @@ namespace Gameplay
             Larutan2
         }
         protected LarutanState currentLarutanState = LarutanState.Larutan1;
-        
+
+
+        protected void Awake()
+        {
+            larutan1Material = larutan1Renderer.material;      
+            larutan2Material = larutan2Renderer.material;       
+        }
+
+        protected void OnDisable()
+        {
+            SetLarutanFilledValue(larutan1Material, 0);
+            SetLarutanFilledValue(larutan2Material, 0);
+        }
+
         public void CreatePenambahanLarutanAnhidridaButton()
         {
             currentLarutanState = LarutanState.Larutan1;
-            currentTargetWeight = targetWeightAnhidrida;
+            currentTargetWeight = targetWeightLarutan1;
             ContextualButtonController.Instance.GenerateContextualButton(2);
             
             ContextualButtonController.Instance.RegisterTextToButton(0, "1 ml");
             ContextualButtonController.Instance.RegisterAction(0, () =>
             {
                 currentWeight += 1;
-                PlayAnimation(animClipAnhidrida_1ml);
+                PlayAnimation(animClipLarutan1_1ml);
                 
-                // Animasi tabung bertambah after dituangin pake coroutine aja
-                float fillValue = _fluidAnhidridaMaterial.GetFloat("_Fill");
-                _fluidAnhidridaMaterial.SetFloat("_Fill", fillValue + value1Ml);
-               
+                // Todo : Animasi tabung bertambah after dituangin pake coroutine aja
+                SetLarutanFilledValue(larutan1Material, GetLarutanFilledValue(larutan1Material) + value1Ml);
             });
             ContextualButtonController.Instance.RegisterTextToButton(1, "10 ml");
             ContextualButtonController.Instance.RegisterAction(1, () =>
             {
                 currentWeight += 10;
-                PlayAnimation(animClipAnhidrida_10ml);
+                PlayAnimation(animClipLarutan1_10ml);
                 
-                // Animasi tabung bertambah after dituangin pake coroutine aja
-                float fillValue = _fluidAnhidridaMaterial.GetFloat("_Fill");
-                _fluidBenzenaMaterial.SetFloat("_Fill", fillValue + value10Ml);
+                // Todo : Animasi tabung bertambah after dituangin pake coroutine aja
+                SetLarutanFilledValue(larutan1Material, GetLarutanFilledValue(larutan1Material) + value10Ml);
             });
            
         }
@@ -66,30 +86,52 @@ namespace Gameplay
         public void CreatePenambahanLarutanBenzenaButton()
         {
             currentLarutanState = LarutanState.Larutan2;
-            currentTargetWeight = targetWeightBenzena;
+            currentTargetWeight = targetWeightLarutan2;
             ContextualButtonController.Instance.GenerateContextualButton(2);
             
             ContextualButtonController.Instance.RegisterTextToButton(0, "1 ml");
             ContextualButtonController.Instance.RegisterAction(0, () =>
             {
                 currentWeight += 1;
-                PlayAnimation(animClipBenzena_1ml);
+                PlayAnimation(animClipLarutan2_1ml);
               
-                // Animasi tabung bertambah after dituangin pake coroutine aja
-                float fillValue = _fluidAnhidridaMaterial.GetFloat("_Fill");
-                _fluidAnhidridaMaterial.SetFloat("_Fill", fillValue + value1Ml);
+                // Todo : Animasi tabung bertambah after dituangin pake coroutine aja
+                SetLarutanFilledValue(larutan2Material, GetLarutanFilledValue(larutan2Material) + value1Ml);
             });
             ContextualButtonController.Instance.RegisterTextToButton(1, "10 ml");
             ContextualButtonController.Instance.RegisterAction(1, () =>
             {
                 currentWeight += 10;
-                PlayAnimation(animClipBenzena_10ml);
+                PlayAnimation(animClipLarutan2_10ml);
             
-                // Animasi tabung bertambah after dituangin pake coroutine aja
-                float fillValue = _fluidAnhidridaMaterial.GetFloat("_Fill");
-                _fluidAnhidridaMaterial.SetFloat("_Fill", fillValue + value1Ml);
+                // Todo : Animasi tabung bertambah after dituangin pake coroutine aja
+                SetLarutanFilledValue(larutan2Material, GetLarutanFilledValue(larutan2Material) + value10Ml);
             });
            
+        }
+
+        protected float GetLarutanFilledValue(Material targetMaterial)
+        {
+            float fillValue = 0;
+            if (targetMaterial)
+            {
+                if(targetMaterial.HasProperty("_Fill"))
+                {
+                    fillValue = targetMaterial.GetFloat("_Fill");
+                }
+            }
+            return fillValue;
+        }
+
+        protected void SetLarutanFilledValue(Material targetMaterial, float value)
+        {
+            if (targetMaterial)
+            {
+                if (targetMaterial.HasProperty("_Fill"))
+                {
+                    targetMaterial.SetFloat("_Fill", value);
+                }
+            }
         }
 
         protected void SetButtonEnabledState(bool enabled)
@@ -115,11 +157,11 @@ namespace Gameplay
             currentWeight = 0; 
             if (currentLarutanState == LarutanState.Larutan1)
             {
-                _fluidAnhidridaMaterial.SetFloat("_Fill", 0);
+                SetLarutanFilledValue(larutan1Material, 0);
             }
             else if(currentLarutanState == LarutanState.Larutan2)
             {
-                _fluidBenzenaMaterial.SetFloat("_Fill", 0);
+                SetLarutanFilledValue(larutan2Material, 0);
             }
             ContextualButtonController.Instance.DestroyButtons();
             tahapanInteractionController.RestartInteraction();

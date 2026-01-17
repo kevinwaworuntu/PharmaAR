@@ -790,7 +790,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c591482a659209b40a12ed61f8e94996,
         type: 3}
       propertyPath: m_Name
-      value: kaca-arloji
+      value: kaca-arloji-AtasTimbangan
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c591482a659209b40a12ed61f8e94996,
         type: 3}

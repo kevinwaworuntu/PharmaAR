@@ -59,7 +59,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: a25787e29733cac4e89912e402c1605c, type: 3}
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -317,6 +317,8 @@ MonoBehaviour:
   animClipBenzena_10ml: {fileID: 7400000, guid: b914157045593dc40b8d1f962835fc08,
     type: 2}
   animator: {fileID: 8489373373621039360}
+  larutan1Renderer: {fileID: 0}
+  larutan2Renderer: {fileID: 0}
   _fluidAnhidridaMaterial: {fileID: 2100000, guid: c75683e9d30429b4a85875f93632d935,
     type: 2}
   _fluidBenzenaMaterial: {fileID: 2100000, guid: ffb6ee9d42a09e748bd19683a07085b0,
