@@ -24425,6 +24425,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimBebasAir7
       objectReference: {fileID: 0}
+    - target: {fileID: 5883665745851325033, guid: cb941effe9d68b24bb4070674f6d432d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e3cb983380d24d041a3aeca304587343, type: 2}
     - target: {fileID: 6188212851796586783, guid: cb941effe9d68b24bb4070674f6d432d,
         type: 3}
       propertyPath: m_LocalPosition.x
