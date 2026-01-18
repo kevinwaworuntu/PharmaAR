@@ -52,8 +52,8 @@ namespace Gameplay
 
         protected void OnDisable()
         {
-            SetLarutanFilledValue(larutan1Material, 0.0033);
-            SetLarutanFilledValue(larutan2Material, 0.0033);
+            SetLarutanFilledValue(larutan1Material, 0.0033f);
+            SetLarutanFilledValue(larutan2Material, 0.0033f);
         }
 
         public void CreatePenambahanLarutanAnhidridaButton()
@@ -157,11 +157,11 @@ namespace Gameplay
             currentWeight = 0; 
             if (currentLarutanState == LarutanState.Larutan1)
             {
-                SetLarutanFilledValue(larutan1Material, 0.0033);
+                SetLarutanFilledValue(larutan1Material, 0.0033f);
             }
             else if(currentLarutanState == LarutanState.Larutan2)
             {
-                SetLarutanFilledValue(larutan2Material, 0.0033);
+                SetLarutanFilledValue(larutan2Material, 0.003f);
             }
             ContextualButtonController.Instance.DestroyButtons();
             tahapanInteractionController.RestartInteraction();
