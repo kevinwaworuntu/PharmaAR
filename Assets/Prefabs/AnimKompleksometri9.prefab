@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2217705952736881732}
   - component: {fileID: -2769884296527353578}
   - component: {fileID: 6816367240326157640}
-  - component: {fileID: -3391387280636875252}
   - component: {fileID: -1105346084447303202}
   m_Layer: 0
   m_Name: AnimKompleksometri9
@@ -99,19 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d040188dd3529e1439ca7952eee1d46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3391387280636875252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2258412758228451243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75160e6bccfe9ef48b00aae97fc1749d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 20
 --- !u!114 &-1105346084447303202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,11 +222,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2582889759991486687}
     m_Modifications:
+    - target: {fileID: 201125941262000648, guid: e14ad2d1e706136438219a5eb1ce327b,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 392b4413b55f20e448a537c0fa7e936d, type: 2}
     - target: {fileID: 3285902712027876471, guid: e14ad2d1e706136438219a5eb1ce327b,
         type: 3}
       propertyPath: m_Name
       value: 'BuretteFluid_v2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8164926098842573914, guid: e14ad2d1e706136438219a5eb1ce327b,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4612dd0c43f212945b322a205a40ccf5, type: 2}
     - target: {fileID: 8696127655617528144, guid: e14ad2d1e706136438219a5eb1ce327b,
         type: 3}
       propertyPath: m_LocalScale.x

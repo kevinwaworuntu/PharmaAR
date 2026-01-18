@@ -23776,6 +23776,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1187432376}
     m_Modifications:
+    - target: {fileID: 3230850971096690038, guid: daad4a153976f1844b12e1feb7869772,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e3cb983380d24d041a3aeca304587343, type: 2}
     - target: {fileID: 3759076688289342629, guid: daad4a153976f1844b12e1feb7869772,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24351,6 +24356,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AnimBebasAir4 6 (salah)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337587323288451728, guid: 1d6e116cdb1c55348acad46535146464,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2528442819920920401, guid: 1d6e116cdb1c55348acad46535146464,
         type: 3}

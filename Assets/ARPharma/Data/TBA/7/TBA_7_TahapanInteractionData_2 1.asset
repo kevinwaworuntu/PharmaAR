@@ -15,4 +15,4 @@ MonoBehaviour:
   title: 
   description: 
   audioNaration: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
-  animationClip: {fileID: 7400000, guid: c60a9f276045c9d409a6d343191d6826, type: 2}
+  animationClip: {fileID: 7400000, guid: 1f86aae2dc8e7924891720902eae5f1f, type: 2}

@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 2528442819920920401}
   - component: {fileID: 5815390696985171813}
   - component: {fileID: 7636825260883823072}
-  - component: {fileID: 408253487867462925}
   - component: {fileID: 7516017197000191985}
   m_Layer: 0
   m_Name: AnimBebasAir4
@@ -128,19 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2953cd83c0cde2241a44b3bf91fe6beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &408253487867462925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2337587323288451728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75160e6bccfe9ef48b00aae97fc1749d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 20
 --- !u!114 &7516017197000191985
 MonoBehaviour:
   m_ObjectHideFlags: 0

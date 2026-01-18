@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 723803493565848897}
   - component: {fileID: 7382738460468412148}
   - component: {fileID: 7262950967087906102}
-  - component: {fileID: 4495176986993813569}
   - component: {fileID: 417445440847589096}
   m_Layer: 0
   m_Name: AnimBebasAir9
@@ -95,19 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2953cd83c0cde2241a44b3bf91fe6beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4495176986993813569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524447244013020719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75160e6bccfe9ef48b00aae97fc1749d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 20
 --- !u!114 &417445440847589096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,11 +558,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6690453098243325880}
     m_Modifications:
+    - target: {fileID: 201125941262000648, guid: e14ad2d1e706136438219a5eb1ce327b,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 392b4413b55f20e448a537c0fa7e936d, type: 2}
     - target: {fileID: 3285902712027876471, guid: e14ad2d1e706136438219a5eb1ce327b,
         type: 3}
       propertyPath: m_Name
       value: 'BuretteFluid_v2 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8164926098842573914, guid: e14ad2d1e706136438219a5eb1ce327b,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4612dd0c43f212945b322a205a40ccf5, type: 2}
     - target: {fileID: 8696127655617528144, guid: e14ad2d1e706136438219a5eb1ce327b,
         type: 3}
       propertyPath: m_LocalScale.x
