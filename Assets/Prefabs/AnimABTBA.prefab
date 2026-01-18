@@ -269,7 +269,6 @@ GameObject:
   - component: {fileID: -3198680179361163428}
   - component: {fileID: 1519026458927579300}
   - component: {fileID: 8630883526743898253}
-  - component: {fileID: -5634903861345112505}
   m_Layer: 0
   m_Name: AnimABTBA
   m_TagString: Untagged
@@ -363,18 +362,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d040188dd3529e1439ca7952eee1d46d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-5634903861345112505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5380907602358013848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f3a8576f23460449212b3a51f54995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6547818554847946284

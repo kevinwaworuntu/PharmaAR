@@ -76,7 +76,6 @@ GameObject:
   - component: {fileID: 7993334688426049313}
   - component: {fileID: 1451762540912998805}
   - component: {fileID: 5742845580173736799}
-  - component: {fileID: 8044507342946927230}
   - component: {fileID: 6037905820170100223}
   m_Layer: 0
   m_Name: AnimKompleksometri6
@@ -164,19 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2953cd83c0cde2241a44b3bf91fe6beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8044507342946927230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111084771315123910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75160e6bccfe9ef48b00aae97fc1749d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 20
 --- !u!114 &6037905820170100223
 MonoBehaviour:
   m_ObjectHideFlags: 0
