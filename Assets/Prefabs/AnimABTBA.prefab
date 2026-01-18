@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: -3198680179361163428}
   - component: {fileID: 1519026458927579300}
   - component: {fileID: 8630883526743898253}
-  - component: {fileID: 7156011409083359225}
+  - component: {fileID: -5634903861345112505}
   m_Layer: 0
   m_Name: AnimABTBA
   m_TagString: Untagged
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d040188dd3529e1439ca7952eee1d46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7156011409083359225
+--- !u!114 &-5634903861345112505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,10 +374,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5380907602358013848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75160e6bccfe9ef48b00aae97fc1749d, type: 3}
+  m_Script: {fileID: 11500000, guid: 71f3a8576f23460449212b3a51f54995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
 --- !u!1 &6547818554847946284
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7427803667573314583
 Transform:
   m_ObjectHideFlags: 0

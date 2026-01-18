@@ -27,10 +27,10 @@ public class RotateObject : MonoBehaviour
 
         //You need two fingers on screen to pinch.
         if(fingersOnScreen > 0 && fingersOnScreen < 2){
-            float rotX = Input.GetAxis("Mouse X")*rotateSpeed*Mathf.Deg2Rad;
+            //float rotX = Input.GetAxis("Mouse X")*rotateSpeed*Mathf.Deg2Rad;
             float roty = Input.GetAxis("Mouse Y")*rotateSpeed*Mathf.Deg2Rad;
 
-            transform.RotateAround(Vector3.up, -rotX);
+            //transform.RotateAround(Vector3.up, -rotX);
             transform.RotateAround(Vector3.right, roty);     
         }
     }

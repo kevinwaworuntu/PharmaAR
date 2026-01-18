@@ -31,8 +31,8 @@ namespace Gameplay
         private Material larutan1Material;
         private Material larutan2Material;
         
-        [SerializeField] protected float value1Ml = 0.0008f;
-        [SerializeField] protected float value10Ml = 0.008f;
+        [SerializeField] protected float value1Ml = 0.00058f;
+        [SerializeField] protected float value10Ml = 0.0058f;
         
         protected bool isCheckWeightToContinue;
         
@@ -52,8 +52,8 @@ namespace Gameplay
 
         protected void OnDisable()
         {
-            SetLarutanFilledValue(larutan1Material, 0);
-            SetLarutanFilledValue(larutan2Material, 0);
+            SetLarutanFilledValue(larutan1Material, 0.0033);
+            SetLarutanFilledValue(larutan2Material, 0.0033);
         }
 
         public void CreatePenambahanLarutanAnhidridaButton()
@@ -157,11 +157,11 @@ namespace Gameplay
             currentWeight = 0; 
             if (currentLarutanState == LarutanState.Larutan1)
             {
-                SetLarutanFilledValue(larutan1Material, 0);
+                SetLarutanFilledValue(larutan1Material, 0.0033);
             }
             else if(currentLarutanState == LarutanState.Larutan2)
             {
-                SetLarutanFilledValue(larutan2Material, 0);
+                SetLarutanFilledValue(larutan2Material, 0.0033);
             }
             ContextualButtonController.Instance.DestroyButtons();
             tahapanInteractionController.RestartInteraction();

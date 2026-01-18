@@ -1223,7 +1223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &87157315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4539,7 +4539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &390262475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6598,7 +6598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &591942280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12034,7 +12034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1055366858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13208,7 +13208,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: ec7471e10021fa84da89b24844d2223c, type: 2}
+      objectReference: {fileID: 9100000, guid: e3cb983380d24d041a3aeca304587343, type: 2}
     - target: {fileID: 4073040041632989232, guid: 6295e2eae9f3ce34eb7b87a164033601,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22096,14 +22096,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Preparasi blanko - Titrasi Bebas Air
+  mTrackableName: earth
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
-  mWidth: 0.2
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 0}
+  mWidth: 0.19999999
+  mHeight: 0.19999999
+  mRuntimeTexture: {fileID: 2800000, guid: 57cfe65690cbfb943b4d5e12454e05c9, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -22139,7 +22139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1988051656}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Preparasi blanko - Titrasi Bebas Air
+  mTargetName: earth
   mDatasetName: 
   mCastedBehaviour: {fileID: 1988051656}
   mMeshFilter: {fileID: 0}
@@ -23981,6 +23981,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimBebasAir5
       objectReference: {fileID: 0}
+    - target: {fileID: 2086383857563615502, guid: b3e6b93f7ea3d78498dc4c10b1952a69,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e3cb983380d24d041a3aeca304587343, type: 2}
     - target: {fileID: 4807565021080653287, guid: b3e6b93f7ea3d78498dc4c10b1952a69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24118,7 +24123,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: ec7471e10021fa84da89b24844d2223c, type: 2}
+      objectReference: {fileID: 9100000, guid: e3cb983380d24d041a3aeca304587343, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24823,6 +24828,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 704432192}
     m_Modifications:
+    - target: {fileID: 1212060306103627768, guid: f702ea170ee46154b8ffe352ad8767b4,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ec7471e10021fa84da89b24844d2223c, type: 2}
     - target: {fileID: 7305913240757037737, guid: f702ea170ee46154b8ffe352ad8767b4,
         type: 3}
       propertyPath: m_LocalPosition.x

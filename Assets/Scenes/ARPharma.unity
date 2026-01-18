@@ -6476,6 +6476,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimBebasAir5
       objectReference: {fileID: 0}
+    - target: {fileID: 2086383857563615502, guid: b3e6b93f7ea3d78498dc4c10b1952a69,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 655f0a184bc0f8542bbbd2d6d4a86b04,
+        type: 2}
     - target: {fileID: 4807565021080653287, guid: b3e6b93f7ea3d78498dc4c10b1952a69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6489,7 +6495,7 @@ PrefabInstance:
     - target: {fileID: 4807565021080653287, guid: b3e6b93f7ea3d78498dc4c10b1952a69,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0103
       objectReference: {fileID: 0}
     - target: {fileID: 4807565021080653287, guid: b3e6b93f7ea3d78498dc4c10b1952a69,
         type: 3}
@@ -8350,12 +8356,17 @@ MonoBehaviour:
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - InteractionData: {fileID: 11400000, guid: b92f4cb7357f3f942818752aeae8d80c, type: 2}
+  - InteractionData: {fileID: 11400000, guid: 5fee13b5934d23447a8e17a534b791bf, type: 2}
     IsNeedPlayerInputToContinue: 1
     UniqueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - InteractionData: {fileID: 11400000, guid: b92f4cb7357f3f942818752aeae8d80c, type: 2}
+  - InteractionData: {fileID: 11400000, guid: dc7ce7c695bb2b14bb51b38208fc79b8, type: 2}
+    IsNeedPlayerInputToContinue: 0
+    UniqueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - InteractionData: {fileID: 11400000, guid: 23867df37af443d4dbfcda2d67b41d13, type: 2}
     IsNeedPlayerInputToContinue: 0
     UniqueEvent:
       m_PersistentCalls:
