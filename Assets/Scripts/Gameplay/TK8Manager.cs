@@ -41,7 +41,7 @@ namespace Gameplay
 
         private void Awake()
         {
-            buretMaterial = buretRenderer.material;     
+            buretMaterial = buretRenderer.material;     // Todo : NUKE
             titrasiMatInstance = titrasiRenderer.material;
         }
 
@@ -49,7 +49,8 @@ namespace Gameplay
         {
             base.OnEnable();
          
-            SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
+            // SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
+            ResetBuretFill();
          
             titrasiMatInstance.SetColor("_Side_Color", initialColor);
             titrasiMatInstance.SetColor("_TopColor", initialColor);
@@ -105,7 +106,8 @@ namespace Gameplay
             titrasiMatInstance.SetColor("_Side_Color", initialColor);
             titrasiMatInstance.SetColor("_TopColor", initialColor);
             
-            SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
+            // SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
+            ResetBuretFill();
             ContextualButtonController.Instance.DestroyButtons();
             tahapanInteractionController.RestartInteraction();
         }
@@ -116,7 +118,8 @@ namespace Gameplay
             titrasiMatInstance.SetColor("_Side_Color", initialColor);
             titrasiMatInstance.SetColor("_TopColor", initialColor);
             
-            SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
+            // SetLarutanFilledValue(buretMaterial, startingBuretFilledValue);
+            ResetBuretFill();
             
             ContextualButtonController.Instance.GenerateContextualButton(2);
             
@@ -163,7 +166,8 @@ namespace Gameplay
                     animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = animClipTetes;
                 }
                 animator.SetTrigger(animationConfig.PlayAnimationParamName);
-                SetLarutanFilledValue(buretMaterial, GetLarutanFilledValue(buretMaterial) + value01Ml);
+                // SetLarutanFilledValue(buretMaterial, GetLarutanFilledValue(buretMaterial) + value01Ml);
+                DecreaseBuretFillValue(1);
                 yield return new WaitForSeconds(animClipTetes.length);
             }
             
@@ -225,6 +229,32 @@ namespace Gameplay
                     targetMaterial.SetFloat("_Fill", value);
                 }
             }
+        }
+
+        [Header("BURETTE FILL SETTINGS")]
+        [SerializeField] private Transform burretFillObject;
+        [SerializeField] private Transform burretCekungObject;
+        
+        private float scaleModifier = 0.21853f;
+        private float initialScale = 90.93853f;
+        
+        private float positionModifier = 0.0107706f;
+        private float initPos = 0.578676f;
+   
+        
+        private void DecreaseBuretFillValue(float targetMl)
+        {
+            var targetScaleZ = burretFillObject.transform.localScale.z - scaleModifier * targetMl;
+            burretFillObject.transform.localScale = new Vector3(burretFillObject.transform.localScale.x, burretFillObject.transform.localScale.y, targetScaleZ);
+            
+            var targetY = burretCekungObject.transform.localPosition.y - positionModifier * targetMl;
+            burretCekungObject.transform.localPosition = new Vector3(burretCekungObject.transform.localPosition.x, targetY, burretCekungObject.transform.localPosition.z);
+        }
+
+        private void ResetBuretFill()
+        {
+            burretFillObject.transform.localScale = new Vector3(burretFillObject.transform.localScale.x, burretFillObject.transform.localScale.y, initialScale);
+            burretCekungObject.transform.localPosition = new Vector3(burretCekungObject.transform.localPosition.x, initPos, burretCekungObject.transform.localPosition.z);
         }
     }
 }

@@ -1988,6 +1988,8 @@ MonoBehaviour:
   textSampelWeight: {fileID: 1369046779}
   buretRenderer: {fileID: 443362274160256497}
   value01Ml: 0.0004
+  burretFillObject: {fileID: 0}
+  burretCekungObject: {fileID: 0}
 --- !u!1 &108886650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2511,8 @@ MonoBehaviour:
   textSampelWeight: {fileID: 1369046779}
   buretRenderer: {fileID: 2121138283}
   value01Ml: 0.0004
+  burretFillObject: {fileID: 0}
+  burretCekungObject: {fileID: 0}
 --- !u!1 &148338001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,6 +3236,8 @@ MonoBehaviour:
   textSampelWeight: {fileID: 1369046779}
   buretRenderer: {fileID: 1869029597}
   value01Ml: 0.0004
+  burretFillObject: {fileID: 0}
+  burretCekungObject: {fileID: 0}
 --- !u!114 &179315082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11574,6 +11580,8 @@ MonoBehaviour:
   textSampelWeight: {fileID: 1369046779}
   buretRenderer: {fileID: 909539012}
   value01Ml: 0.0004
+  burretFillObject: {fileID: 0}
+  burretCekungObject: {fileID: 0}
 --- !u!1 &999607755
 GameObject:
   m_ObjectHideFlags: 0
@@ -14907,6 +14915,8 @@ MonoBehaviour:
   textSampelWeight: {fileID: 1369046779}
   buretRenderer: {fileID: 3517587671129020796}
   value01Ml: 0.0004
+  burretFillObject: {fileID: 0}
+  burretCekungObject: {fileID: 0}
 --- !u!114 &1451963023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19098,6 +19108,8 @@ MonoBehaviour:
   textSampelWeight: {fileID: 1369046779}
   buretRenderer: {fileID: 565845334}
   value01Ml: 0.0004
+  burretFillObject: {fileID: 0}
+  burretCekungObject: {fileID: 0}
 --- !u!1001 &1869029595
 PrefabInstance:
   m_ObjectHideFlags: 0
