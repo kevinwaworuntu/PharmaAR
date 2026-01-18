@@ -4112,14 +4112,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: marker-bebasair-2
+  mTrackableName: Preparasi buret - Titrasi Bebas Air
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 7a973d0a75ca3464b943c6c16598e222, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 641de2233d83b11408402d9cedaede7c, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -15208,8 +15208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTargetWeight: 0
-  targetWeightLarutan1: 40
-  targetWeightLarutan2: 80
+  targetWeightLarutan1: 100
+  targetWeightLarutan2: 15
   animClipLarutan1_1ml: {fileID: 7400000, guid: 1b87b52dbade1cf4f866aa81f6f19042,
     type: 2}
   animClipLarutan1_10ml: {fileID: 7400000, guid: 1b87b52dbade1cf4f866aa81f6f19042,
@@ -22217,8 +22217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTargetWeight: 0
-  targetWeightLarutan1: 40
-  targetWeightLarutan2: 80
+  targetWeightLarutan1: 100
+  targetWeightLarutan2: 15
   animClipLarutan1_1ml: {fileID: 7400000, guid: 8c0302c309bc65444be3d85cf79478b2,
     type: 2}
   animClipLarutan1_10ml: {fileID: 7400000, guid: 8c0302c309bc65444be3d85cf79478b2,
