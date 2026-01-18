@@ -238,7 +238,7 @@ namespace Gameplay
         private float scaleModifier = 0.21853f;
         private float initialScale = 90.93853f;
         
-        private float positionModifier = 0.0107706f;
+        private float positionModifier = 0.00107706f;
         private float initPos = 0.578676f;
    
         
