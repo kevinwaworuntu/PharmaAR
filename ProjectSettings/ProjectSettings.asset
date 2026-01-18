@@ -141,12 +141,7 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
-  preloadedAssets:
-  - {fileID: 7934383878284023656, guid: e23a4301b74adbf48879b13953e8f967, type: 2}
-  - {fileID: 11400000, guid: 36840f95751462443ae30f0004d74c54, type: 2}
-  - {fileID: -6008075357654900468, guid: 977f9d551d2036744bff6d7a55838bce, type: 2}
-  - {fileID: 11400000, guid: 9248bae56e6425b4f9f91f14603ae286, type: 2}
-  - {fileID: 11400000, guid: 22dbdd5ddad90ce408bbf10e6e6170cb, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -167,7 +162,8 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.DefaultCompany.PharmaAR
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -175,7 +171,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 23
+  AndroidMinSdkVersion: 30
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -405,7 +401,10 @@ PlayerSettings:
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
-  m_BuildTargetDefaultTextureCompressionFormat: []
+  m_BuildTargetDefaultTextureCompressionFormat:
+  - serializedVersion: 3
+    m_BuildTarget: Android
+    m_Formats: 01000000
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
