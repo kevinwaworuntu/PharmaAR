@@ -26,7 +26,12 @@ namespace Gameplay
             {
                 //balanceObject.IncreaseWeight(25); Triggered by anim instead
                 PlayAnimation(animClipBalance);
+                DecreaseSerbukFillValue(1);
             });
+        }
+        protected void OnDisable()
+        {
+            ResetSerbukFill();
         }
        
         private void SetButtonEnabledState(bool enabled)
@@ -94,6 +99,24 @@ namespace Gameplay
         public void SetIsCheckWeightToContinue(bool value)
         {
             isCheckWeightToContinue = value;
+        }
+
+        [Header("SERBUK FILL SETTINGS")]
+        [SerializeField] private Transform serbukFillObject;
+        
+        private float scaleModifier = 0.1225f;
+        private float initialScale = 0.02f;
+   
+        
+        private void DecreaseSerbukFillValue(float targetMl)
+        {
+            var targetScaleZ = serbukFillObject.transform.localScale.z + scaleModifier * targetMl;
+            serbukFillObject.transform.localScale = new Vector3(targetScaleZ, targetScaleZ, targetScaleZ);
+        }
+
+        private void ResetSerbukFill()
+        {
+            serbukFillObject.transform.localScale = new Vector3(initialScale, initialScale, initialScale);
         }
     }
 }

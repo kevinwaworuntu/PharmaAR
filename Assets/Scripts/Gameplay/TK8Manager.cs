@@ -19,6 +19,7 @@ namespace Gameplay
         [SerializeField] protected AnimationClip animClipOpenKeran;
         [SerializeField] protected AnimationClip animClipCloseKeran;
         [SerializeField] protected AnimationClip animClipTetes;
+        [SerializeField] protected AnimationClip animClipTetesBanyak;
         [SerializeField] protected Animator animator;
         
         [SerializeField] private Renderer titrasiRenderer;
@@ -159,16 +160,34 @@ namespace Gameplay
             animator.SetTrigger(animationConfig.PlayAnimationParamName);
             yield return new WaitForSeconds(animClipOpenKeran.length);
 
-            for (int i = 0; i < totalTetes; i++)
-            {
+            if (totalTetes > 1){
+                if (animationConfig.GenericAnimController)
+                {
+                    animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = animClipTetesBanyak;
+                }
+                animator.SetTrigger(animationConfig.PlayAnimationParamName);
+                yield return new WaitForSeconds(animClipTetesBanyak.length);
+            }
+            else{
                 if (animationConfig.GenericAnimController)
                 {
                     animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = animClipTetes;
                 }
                 animator.SetTrigger(animationConfig.PlayAnimationParamName);
+                yield return new WaitForSeconds(animClipTetes.length);
+            }
+            
+
+            for (int i = 0; i < totalTetes; i++)
+            {
+                // if (animationConfig.GenericAnimController)
+                // {
+                //     animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = animClipTetes;
+                // }
+                // animator.SetTrigger(animationConfig.PlayAnimationParamName);
                 // SetLarutanFilledValue(buretMaterial, GetLarutanFilledValue(buretMaterial) + value01Ml);
                 DecreaseBuretFillValue(1);
-                yield return new WaitForSeconds(animClipTetes.length);
+                //yield return new WaitForSeconds(animClipTetes.length);
             }
             
             animator.SetTrigger(animationConfig.PlayAnimationParamName);
