@@ -15838,7 +15838,7 @@ MonoBehaviour:
   targetWeight: 200
   animator: {fileID: 1004872738}
   animClipBalance: {fileID: 7400000, guid: eab5f0bfa19f6074c97d06472d42d714, type: 2}
-  serbukFillObject: {fileID: 0}
+  serbukFillObject: {fileID: 1544783601}
 --- !u!1 &1489822888
 GameObject:
   m_ObjectHideFlags: 0
@@ -16287,6 +16287,12 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 723803493565848897, guid: f25e18ad9e66a1c498088a20ab7e2220,
     type: 3}
   m_PrefabInstance: {fileID: 909539010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1544783601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7565537224076040562, guid: 94bb1dfbb51a3504f99acc21aea80337,
+    type: 3}
+  m_PrefabInstance: {fileID: 5405446064099635181}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1551100813
 GameObject:

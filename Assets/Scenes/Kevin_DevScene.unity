@@ -167,6 +167,7 @@ MonoBehaviour:
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
   animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 1207063081}
   titrasiRenderer: {fileID: 1207063080}
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
@@ -2261,6 +2262,7 @@ MonoBehaviour:
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
   animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 1250885074}
   titrasiRenderer: {fileID: 1250885073}
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
@@ -3349,7 +3351,7 @@ PrefabInstance:
     - target: {fileID: 4594583945710788423, guid: b695a80f7b6c0124681f5d5f5cb6774e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6787067149738513393, guid: b695a80f7b6c0124681f5d5f5cb6774e,
         type: 3}
@@ -3466,6 +3468,7 @@ MonoBehaviour:
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
   animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 490721061}
   titrasiRenderer: {fileID: 490721060}
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
@@ -3707,6 +3710,7 @@ MonoBehaviour:
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
   animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 1751781248}
   titrasiRenderer: {fileID: 1751781247}
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
@@ -4648,6 +4652,7 @@ MonoBehaviour:
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
   animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 630596121}
   titrasiRenderer: {fileID: 630596120}
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
@@ -5009,6 +5014,7 @@ MonoBehaviour:
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
   animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
+  animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 495541732}
   titrasiRenderer: {fileID: 495541731}
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
