@@ -7531,18 +7531,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 626653256}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &626653258 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4423122180961485172, guid: daad4a153976f1844b12e1feb7869772,
-    type: 3}
-  m_PrefabInstance: {fileID: 626653256}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &626653259 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1337581790764722957, guid: daad4a153976f1844b12e1feb7869772,
-    type: 3}
-  m_PrefabInstance: {fileID: 626653256}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &626653260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7521971589688384696, guid: daad4a153976f1844b12e1feb7869772,
@@ -14941,12 +14929,6 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1451963018}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
---- !u!23 &1454995935 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1220168540176611484, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 1986762607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1474967335
 GameObject:
   m_ObjectHideFlags: 0
@@ -15119,7 +15101,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1474967342}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanAnhidridaButton
+          m_MethodName: CreatePenambahanLarutan1Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15148,7 +15130,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1474967342}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanBenzenaButton
+          m_MethodName: CreatePenambahanLarutan2Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15245,10 +15227,12 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: c974a48ca0bf772449e4965dcfe3f31d,
     type: 2}
   animator: {fileID: 1505310479}
-  larutan1Renderer: {fileID: 1129233140714235329}
-  larutan2Renderer: {fileID: 1129233140714235328}
-  value1Ml: 0.0008
-  value10Ml: 0.008
+  larutan1Container:
+    fillObject: {fileID: 1129233140714235333}
+    meniskusObject: {fileID: 1129233140714235332}
+  Larutan2Container:
+    fillObject: {fileID: 1129233140714235331}
+    meniskusObject: {fileID: 1129233140714235330}
   gelasUkurFillObject: {fileID: 1129233140714235333}
   gelasUkurCekungObject: {fileID: 1129233140714235332}
   gelasUkurFillObject2: {fileID: 1129233140714235331}
@@ -15991,7 +15975,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1489822895}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanAnhidridaButton
+          m_MethodName: CreatePenambahanLarutan1Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16020,7 +16004,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1489822895}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanBenzenaButton
+          m_MethodName: CreatePenambahanLarutan2Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16088,10 +16072,12 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: 4469e80f57968cd4f96a15cd754a98a4,
     type: 2}
   animator: {fileID: 1986762609}
-  larutan1Renderer: {fileID: 1454995935}
-  larutan2Renderer: {fileID: 1592095489}
-  value1Ml: 0.0008
-  value10Ml: 0.008
+  larutan1Container:
+    fillObject: {fileID: 1986762613}
+    meniskusObject: {fileID: 1986762612}
+  Larutan2Container:
+    fillObject: {fileID: 1986762611}
+    meniskusObject: {fileID: 1986762610}
   gelasUkurFillObject: {fileID: 1986762613}
   gelasUkurCekungObject: {fileID: 1986762612}
   gelasUkurFillObject2: {fileID: 1986762611}
@@ -16491,12 +16477,6 @@ Transform:
   - {fileID: 1705230722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1592095489 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1092452694802437487, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 1986762607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1606882368 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3417427139710361048, guid: 16355c58438d32c4b9243d00b8a7576f,
@@ -20330,7 +20310,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1999526540}
           m_TargetAssemblyTypeName: Gameplay.TBA6Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanAnhidridaButton
+          m_MethodName: CreatePenambahanLarutan1Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -20359,7 +20339,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 1999526540}
           m_TargetAssemblyTypeName: Gameplay.TBA6Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanBenzenaButton
+          m_MethodName: CreatePenambahanLarutan2Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -20400,7 +20380,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1999526533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54b6416117d44c27bcb8ebc160f3301f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a0b9e426a584dd187390147f26d0c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentTargetWeight: 0
@@ -20415,10 +20395,12 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: 99681900dad8655468d5722f89247680,
     type: 2}
   animator: {fileID: 1351317245}
-  larutan1Renderer: {fileID: 626653259}
-  larutan2Renderer: {fileID: 626653258}
-  value1Ml: 0.0008
-  value10Ml: 0.008
+  larutan1Container:
+    fillObject: {fileID: 626653263}
+    meniskusObject: {fileID: 626653262}
+  Larutan2Container:
+    fillObject: {fileID: 626653261}
+    meniskusObject: {fileID: 626653260}
   gelasUkurFillObject: {fileID: 626653263}
   gelasUkurCekungObject: {fileID: 626653262}
   gelasUkurFillObject2: {fileID: 626653261}
@@ -21353,18 +21335,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1383644401e5bf8409c585463afd807b, type: 3}
---- !u!23 &1129233140714235328 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3781823838994628874, guid: 1383644401e5bf8409c585463afd807b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1129233140714235327}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1129233140714235329 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1079401267957660700, guid: 1383644401e5bf8409c585463afd807b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1129233140714235327}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1129233140714235330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 147873735751486565, guid: 1383644401e5bf8409c585463afd807b,
@@ -21937,7 +21907,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 5499988241908468520}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanAnhidridaButton
+          m_MethodName: CreatePenambahanLarutan1Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21966,7 +21936,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 5499988241908468520}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanBenzenaButton
+          m_MethodName: CreatePenambahanLarutan2Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -22169,7 +22139,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8139625941903175768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54b6416117d44c27bcb8ebc160f3301f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a0b9e426a584dd187390147f26d0c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentTargetWeight: 0
@@ -22184,10 +22154,12 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: b914157045593dc40b8d1f962835fc08,
     type: 2}
   animator: {fileID: 2117592902207494865}
-  larutan1Renderer: {fileID: 8282437265113007011}
-  larutan2Renderer: {fileID: 8282437265113007010}
-  value1Ml: 0.0008
-  value10Ml: 0.008
+  larutan1Container:
+    fillObject: {fileID: 8282437265113007015}
+    meniskusObject: {fileID: 8282437265113007014}
+  Larutan2Container:
+    fillObject: {fileID: 8282437265113007013}
+    meniskusObject: {fileID: 8282437265113007012}
   gelasUkurFillObject: {fileID: 8282437265113007015}
   gelasUkurCekungObject: {fileID: 8282437265113007014}
   gelasUkurFillObject2: {fileID: 8282437265113007013}
@@ -22667,18 +22639,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3108b47f9439f244829440af0ece6e6, type: 3}
---- !u!23 &8282437265113007010 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1523046379579689666, guid: f3108b47f9439f244829440af0ece6e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 8282437265113007009}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &8282437265113007011 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8605637039256769440, guid: f3108b47f9439f244829440af0ece6e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 8282437265113007009}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8282437265113007012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2031365442440324363, guid: f3108b47f9439f244829440af0ece6e6,

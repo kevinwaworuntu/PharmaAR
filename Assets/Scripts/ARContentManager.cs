@@ -6,9 +6,13 @@ public class ARContentManager : MonoBehaviour
 {
     protected TahapanInteractionController tahapanInteractionController;
 
-    protected void Start()
+    protected virtual void Awake()
     {
         tahapanInteractionController = GetComponent<TahapanInteractionController>();
+    }
+    
+    protected void Start()
+    {
         if (tahapanInteractionController != null)
         {
             tahapanInteractionController.OnStartWaitingForPlayerInputToContinue += OnStartWaitingForPlayerInputToContinueHandler;
@@ -23,13 +27,22 @@ public class ARContentManager : MonoBehaviour
         {
             return;
         }
-        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(false);
-        UIManager.Instance.btnNextInteraction.gameObject.SetActive(false);
+        ToggleNavigationButtons(false, false);
+    }
+
+    private void OnDestroy()
+    {
+        if (tahapanInteractionController != null)
+        {
+            tahapanInteractionController.OnStartWaitingForPlayerInputToContinue -= OnStartWaitingForPlayerInputToContinueHandler;
+            tahapanInteractionController.OnFinishPlayingInteraction -= OnFinishPlayingTahapanInteractionHandler;
+            tahapanInteractionController.OnInteractionComplete -= OnInteractionCompleteHandler;
+        }
     }
 
     public void OnTargetFound()
     {
-        if (UIManager.Instance.IsPanelInfoActive())
+        if (!UIManager.Instance || UIManager.Instance.IsPanelInfoActive())
         {
             return;
         }
@@ -40,16 +53,23 @@ public class ARContentManager : MonoBehaviour
         tahapanInteractionController.StartInteraction();
     }
 
+    public void OnTargetLost()
+    {
+        if (!UIManager.Instance)
+        {
+            return;
+        }
+        UIManager.Instance.HideAllARPopups();
+    }
+    
     protected virtual void OnStartWaitingForPlayerInputToContinueHandler()
     {
         if (!UIManager.Instance)
         {
             return;
         }
-        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(false);
-        UIManager.Instance.btnNextInteraction.gameObject.SetActive(true);
+        ToggleNavigationButtons(true, false);
         
-        // ToDo : Play Button Next Interaction Visual Cue
         if (!tahapanInteractionController)
         {
             return;
@@ -63,8 +83,7 @@ public class ARContentManager : MonoBehaviour
         UIManager.Instance.btnNextInteraction.onClick.AddListener(tahapanInteractionController.PlayerInteractToFinishInteraction);
         UIManager.Instance.btnNextInteraction.onClick.AddListener(() =>
         {
-            UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(false);
-            UIManager.Instance.btnNextInteraction.gameObject.SetActive(false);
+            ToggleNavigationButtons(false, false);
         });
     }
     
@@ -76,6 +95,7 @@ public class ARContentManager : MonoBehaviour
         }
         tahapanInteractionController.ContinueInteraction();
     }
+    
     protected void OnInteractionCompleteHandler()
     {
         if (!UIManager.Instance)
@@ -83,20 +103,24 @@ public class ARContentManager : MonoBehaviour
             return;
         }
         UIManager.Instance.NarationPanel.gameObject.SetActive(false);
-        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(true);
-        UIManager.Instance.btnNextInteraction.gameObject.SetActive(false);
+        ToggleNavigationButtons(true, false);
 
         UIManager.Instance.btnCompleteTahapan.onClick.RemoveAllListeners();
         UIManager.Instance.btnCompleteTahapan.onClick.AddListener(GameManager.Instance.CompleteCurrentTahap);
-        UIManager.Instance.btnCompleteTahapan.onClick.AddListener(ContextualButtonController.Instance.DestroyButtons);
+        UIManager.Instance.btnCompleteTahapan.onClick.AddListener(() => 
+        {
+            GameManager.Instance.CompleteCurrentTahap();
+            ContextualButtonController.Instance?.DestroyButtons();
+        });
     }
-
-    public void OnTargetLost()
+    
+    private void ToggleNavigationButtons(bool nextActive, bool completeActive)
     {
         if (!UIManager.Instance)
         {
             return;
         }
-        UIManager.Instance.HideAllARPopups();
+        UIManager.Instance.btnNextInteraction.gameObject.SetActive(nextActive);
+        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(!completeActive);
     }
 }

@@ -1,11 +1,6 @@
 ﻿using System;
-using Config;
-using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
-using Utility;
 
 namespace Gameplay
 {
@@ -41,11 +36,9 @@ namespace Gameplay
 
         private void OnEnable()
         {
-            currentInteractionIndex = 0;
-            isStarted = false;
-            isPlaying = false;
+            ResetState();
         }
-
+        
         private void OnDisable()
         {
             isStarted = false;
@@ -56,13 +49,11 @@ namespace Gameplay
             }
         }
         
-        [ContextMenu("Start Interaction")]
         public void StartInteraction()
         {
             EnterInteractionState(currentInteractionIndex);
         }
-
-        [ContextMenu("Continue Interaction")]
+        
         public void ContinueInteraction()
         {
             EnterInteractionState(currentInteractionIndex);
@@ -73,8 +64,7 @@ namespace Gameplay
             isPlaying = false;
             EnterInteractionState(currentInteractionIndex);
         }
-
-        [ContextMenu("Simulating Tap")]
+        
         public void PlayerInteractToFinishInteraction()
         {
             if (!isPlaying)
@@ -117,16 +107,15 @@ namespace Gameplay
                 }   
             }
             
-            MainInteractionState();
+            ExecuteInteractionState();
         }
 
-        private void MainInteractionState()
+        private void ExecuteInteractionState()
         {
             interactionDataActionMappings[currentInteractionIndex].UniqueEvent?.Invoke();
             interactionPlayer.Play(interactionDataActionMappings[currentInteractionIndex].InteractionData, () =>
             {
-                //bool isPlayingLastIndex = interactionDataActionMappings.Length - 1 == currentInteractionIndex;
-                if (interactionDataActionMappings[currentInteractionIndex].IsNeedPlayerInputToContinue)// && !isPlayingLastIndex)
+                if (interactionDataActionMappings[currentInteractionIndex].IsNeedPlayerInputToContinue)
                 {
                     OnStartWaitingForPlayerInputToContinue?.Invoke();
                     return;
@@ -157,7 +146,6 @@ namespace Gameplay
             {
                 return false;
             }
-
             if (targetIndex < 0)
             {
                 return false;
@@ -201,6 +189,13 @@ namespace Gameplay
         public bool IsPlayingLastIndex()
         {
             return interactionDataActionMappings.Length - 1 == currentInteractionIndex;
+        }
+        
+        private void ResetState()
+        {
+            currentInteractionIndex = 0;
+            isStarted = false;
+            isPlaying = false;
         }
     }
 }

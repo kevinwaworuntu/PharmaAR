@@ -829,7 +829,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 317210420}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanAnhidridaButton
+          m_MethodName: CreatePenambahanLarutan1Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -858,7 +858,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 317210420}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanBenzenaButton
+          m_MethodName: CreatePenambahanLarutan2Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2674,7 +2674,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 823581507}
           m_TargetAssemblyTypeName: Gameplay.TBA6Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanAnhidridaButton
+          m_MethodName: CreatePenambahanLarutan1Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2703,7 +2703,7 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 823581507}
           m_TargetAssemblyTypeName: Gameplay.TBA6Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanBenzenaButton
+          m_MethodName: CreatePenambahanLarutan2Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3009,7 +3009,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1095405888}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanAnhidridaButton
+          m_MethodName: CreatePenambahanLarutan1Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3038,7 +3038,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1095405888}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanBenzenaButton
+          m_MethodName: CreatePenambahanLarutan2Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5261,7 +5261,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2049800191}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanAnhidridaButton
+          m_MethodName: CreatePenambahanLarutan1Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5290,7 +5290,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2049800191}
           m_TargetAssemblyTypeName: Gameplay.TBA4Manager, Assembly-CSharp
-          m_MethodName: CreatePenambahanLarutanBenzenaButton
+          m_MethodName: CreatePenambahanLarutan2Button
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

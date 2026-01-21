@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class BalanceObject : MonoBehaviour
+public class TimbanganObject : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI displayText;
     private float currentWeight;
