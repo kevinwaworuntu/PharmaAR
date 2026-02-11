@@ -109,8 +109,8 @@ namespace Gameplay
         
         private void PowderFillValue(float targetMl)
         {
-            var targetScaleZ = powderFillObject.transform.localScale.z + scaleModifier * targetMl;
-            powderFillObject.transform.localScale = new Vector3(targetScaleZ, targetScaleZ, targetScaleZ);
+            var targetScale = powderFillObject.transform.localScale.z + scaleModifier * targetMl;
+            powderFillObject.transform.localScale = Vector3.one * targetScale;
         }
 
         private void ResetPowderFill()

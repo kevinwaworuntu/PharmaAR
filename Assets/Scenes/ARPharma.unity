@@ -1163,14 +1163,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: pipet
+  mTrackableName: tba7
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 039f86dd082641a49bb567ae404bb88f, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: f6d3a38eb6a6cab4ab5718e2c45a35ce, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1388,14 +1388,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: preparasi buret - titrasi kompleksometri
+  mTrackableName: tk2
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 1c32590df76c76f4c99b4ab46d9de1ad, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: fda9196ef4bc1d340b1f6a8d0b426c25, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1853,14 +1853,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: simulasi titrasi blanko - titrasi kompleksometri
+  mTrackableName: tk9
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 8beb7a5a8ef6bce48904461259dbee6c, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 2420acfbc3edb5e4a8c69b77c621f563, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1985,7 +1985,6 @@ MonoBehaviour:
   ceilTargets:
   - 0.1
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 7400000, guid: 411c216d8b9c1ca45b8de2e6baf89ab1, type: 2}
   animator: {fileID: 1451460084}
@@ -1993,10 +1992,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 1369046779}
-  buretRenderer: {fileID: 443362274160256497}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 997873072}
-  burretCekungObject: {fileID: 481626178}
+  buretteFillObject: {fileID: 997873072}
+  buretteMeniskusObject: {fileID: 481626178}
 --- !u!1 &108886650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,14 +2266,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Titrasi sampel - titrasi bebas air
+  mTrackableName: tba10
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: a5e495f92cb2191469a41d9d19eab5fe, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 7307f15efb55cbc4c9f9bce279be13ee, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -2381,7 +2378,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 1861059084}
           m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
@@ -2509,7 +2506,6 @@ MonoBehaviour:
   - 20.8
   - 21.2
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 7400000, guid: 411c216d8b9c1ca45b8de2e6baf89ab1, type: 2}
   animator: {fileID: 2121138282}
@@ -2517,10 +2513,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 1, b: 0.065570354, a: 1}
   textSampelWeight: {fileID: 1369046779}
-  buretRenderer: {fileID: 2121138283}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 1270933033}
-  burretCekungObject: {fileID: 1662853244}
+  buretteFillObject: {fileID: 1270933033}
+  buretteMeniskusObject: {fileID: 1662853244}
 --- !u!1 &148338001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,14 +3008,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Simulasi pembakuan - Titrasi Bebas air
+  mTrackableName: tba8
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 1d52fe9f04b33b34abf8f82cb51ddee1, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: eac8b7e3277edad42bad1ba2bc8fcc87, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -3235,7 +3229,6 @@ MonoBehaviour:
   - 6.8
   - 7
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 7400000, guid: 411c216d8b9c1ca45b8de2e6baf89ab1, type: 2}
   animator: {fileID: 2024141931}
@@ -3243,10 +3236,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 1, b: 0.06666667, a: 1}
   textSampelWeight: {fileID: 1369046779}
-  buretRenderer: {fileID: 1869029597}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 1271964325}
-  burretCekungObject: {fileID: 2032585679}
+  buretteFillObject: {fileID: 1271964325}
+  buretteMeniskusObject: {fileID: 2032585679}
 --- !u!114 &179315082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4138,14 +4129,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Preparasi buret - Titrasi Bebas Air
+  mTrackableName: tba 2
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 641de2233d83b11408402d9cedaede7c, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 5755706a86b32ba478cb75dee92b01f5, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -6597,7 +6588,7 @@ Camera:
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &542902859 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6883892465038684013, guid: b3e6b93f7ea3d78498dc4c10b1952a69,
+  m_CorrespondingSourceObject: {fileID: 6724876733135473162, guid: b3e6b93f7ea3d78498dc4c10b1952a69,
     type: 3}
   m_PrefabInstance: {fileID: 542902855}
   m_PrefabAsset: {fileID: 0}
@@ -6950,14 +6941,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: marker-bebasair-1
+  mTrackableName: tba 1
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: a2f301c3714686a4d85b2a2962703b47, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 3c063250e77fc9146b11b0c5cfdcbec9, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -7049,7 +7040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 601437288}
   mHiddenRoot: {fileID: 0}
-  mTargetName: marker-bebasair-1
+  mTargetName: tba 1
   mDatasetName: 
   mCastedBehaviour: {fileID: 601437288}
   mMeshFilter: {fileID: 0}
@@ -8016,14 +8007,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Preparasi alat dan bahan - titrasi kompleksometri
+  mTrackableName: tk1
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: a80ec2eb549c93545806e929be8f88f4, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: f4f9b3b42c710f746ae9741049893b54, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -8218,14 +8209,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Preparasi Larutan Baku Primer (2)
+  mTrackableName: tk 3
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: ab5d78fb615bda4489d1dddb9f217fe2, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: c4be1b45927ab964593845f20be9cb93, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -9813,14 +9804,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: penambahan indikator - titrasi kompleksometri
+  mTrackableName: tk7
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.19999999
   mHeight: 0.19999999
-  mRuntimeTexture: {fileID: 2800000, guid: 24c8746e6821a294e8b90669a220a149, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: fa1507b92a91132409531897241e5e57, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -11018,12 +11009,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 909539010}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &909539012 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8525310727519815099, guid: f25e18ad9e66a1c498088a20ab7e2220,
-    type: 3}
-  m_PrefabInstance: {fileID: 909539010}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &921629535
 GameObject:
   m_ObjectHideFlags: 0
@@ -11423,14 +11408,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Simulasi titrasi blanko - Titrasi bebas air
+  mTrackableName: tba9
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 1dc4208f5b5ba774a9c6f709c688075f, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 66dbdf45a716ba748a7e2a7d385f1580, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -11543,7 +11528,6 @@ MonoBehaviour:
   ceilTargets:
   - 0.1
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 7400000, guid: 411c216d8b9c1ca45b8de2e6baf89ab1, type: 2}
   animator: {fileID: 1540916908}
@@ -11551,10 +11535,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0.5157392, g: 1, b: 0, a: 1}
   textSampelWeight: {fileID: 1369046779}
-  buretRenderer: {fileID: 909539012}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 45613154}
-  burretCekungObject: {fileID: 1382189758}
+  buretteFillObject: {fileID: 45613154}
+  buretteMeniskusObject: {fileID: 45613154}
 --- !u!4 &997873072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2230715354886229633, guid: 0bcdceb273398d14b80b1d1ef415ed75,
@@ -13751,12 +13733,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378495894}
   m_CullTransparentMesh: 1
---- !u!4 &1382189758 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5872405889895577240, guid: f25e18ad9e66a1c498088a20ab7e2220,
-    type: 3}
-  m_PrefabInstance: {fileID: 909539010}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1384396054
 GameObject:
   m_ObjectHideFlags: 0
@@ -13981,14 +13957,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Penimbangan sampel - Titrasi bebas air
+  mTrackableName: tba5
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 1a0ffe6ab6775cd479ad6e519136dc90, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 8e72144cbd468be448e3ba2553aab2a4, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -14104,11 +14080,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b088c54c981c4e9a80ada42d186656ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balanceObject: {fileID: 542902857}
+  timbanganObject: {fileID: 542902857}
   targetWeight: 400
   animator: {fileID: 871386558}
   animClipBalance: {fileID: 7400000, guid: 95f13f546bcc63d4d9da3be0783052cb, type: 2}
-  serbukFillObject: {fileID: 542902859}
+  powderFillObject: {fileID: 542902859}
 --- !u!114 &1408983916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14123,7 +14099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1408983911}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Penimbangan sampel - Titrasi bebas air
+  mTargetName: tba5
   mDatasetName: 
   mCastedBehaviour: {fileID: 1408983911}
   mMeshFilter: {fileID: 0}
@@ -14677,14 +14653,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: simulasi pembakuan - titrasi kompleksometri
+  mTrackableName: tk8
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 80bd22d09e875aa4da3d3baefda59099, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 374576936039f1c4f809e882f5b20b72, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -14898,7 +14874,6 @@ MonoBehaviour:
   - 9.2
   - 11.2
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 7400000, guid: 411c216d8b9c1ca45b8de2e6baf89ab1, type: 2}
   animator: {fileID: 2146197843}
@@ -14906,10 +14881,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 1369046779}
-  buretRenderer: {fileID: 3517587671129020796}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 1999659498}
-  burretCekungObject: {fileID: 658781718}
+  buretteFillObject: {fileID: 1999659498}
+  buretteMeniskusObject: {fileID: 658781718}
 --- !u!114 &1451963023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15033,14 +15006,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: preparasi larutan blanko - titrasi kompleksometri
+  mTrackableName: tk4
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: a2cfb272565da324f918c1f9948fabff, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 25b22549a0cc047458d89b30946307d4, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -15233,10 +15206,6 @@ MonoBehaviour:
   Larutan2Container:
     fillObject: {fileID: 1129233140714235331}
     meniskusObject: {fileID: 1129233140714235330}
-  gelasUkurFillObject: {fileID: 1129233140714235333}
-  gelasUkurCekungObject: {fileID: 1129233140714235332}
-  gelasUkurFillObject2: {fileID: 1129233140714235331}
-  gelasUkurCekungObject2: {fileID: 1129233140714235330}
 --- !u!1 &1476330383
 GameObject:
   m_ObjectHideFlags: 0
@@ -15262,7 +15231,7 @@ Transform:
   m_GameObject: {fileID: 1476330383}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 520.9378, y: 1951.5894, z: 0.0052360706}
+  m_LocalPosition: {x: 520.9378, y: 1951.5894, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15688,14 +15657,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: penimbangan sampel - titrasi kompleksometri
+  mTrackableName: tk5
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: d00ecd2c6e5afb64abd0639b19696bf5, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 0f8290f0d977e1c4c8a567e68c60cada, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -15818,11 +15787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b088c54c981c4e9a80ada42d186656ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balanceObject: {fileID: 1724224437}
+  timbanganObject: {fileID: 1724224437}
   targetWeight: 200
   animator: {fileID: 1004872738}
   animClipBalance: {fileID: 7400000, guid: eab5f0bfa19f6074c97d06472d42d714, type: 2}
-  serbukFillObject: {fileID: 1544783601}
+  powderFillObject: {fileID: 5405446064099635182}
 --- !u!1 &1489822888
 GameObject:
   m_ObjectHideFlags: 0
@@ -15927,14 +15896,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Preparasi blanko - Titrasi Bebas Air
+  mTrackableName: tba4
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: ddb3f4f394351564281c5944a4822c06, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 48ec90337ffdd0d4ca808494ba26c819, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -16078,10 +16047,6 @@ MonoBehaviour:
   Larutan2Container:
     fillObject: {fileID: 1986762611}
     meniskusObject: {fileID: 1986762610}
-  gelasUkurFillObject: {fileID: 1986762613}
-  gelasUkurCekungObject: {fileID: 1986762612}
-  gelasUkurFillObject2: {fileID: 1986762611}
-  gelasUkurCekungObject2: {fileID: 1986762610}
 --- !u!114 &1489822896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16273,12 +16238,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 723803493565848897, guid: f25e18ad9e66a1c498088a20ab7e2220,
     type: 3}
   m_PrefabInstance: {fileID: 909539010}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1544783601 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7565537224076040562, guid: 94bb1dfbb51a3504f99acc21aea80337,
-    type: 3}
-  m_PrefabInstance: {fileID: 5405446064099635181}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1551100813
 GameObject:
@@ -18865,14 +18824,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: titrasi sampel - titrasi kompleksometri
+  mTrackableName: tk10
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: b82b0fde99a1f8e4a910c2d938293f96, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: d5ef2027c076ebf4da5d3b36745c640d, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -18977,7 +18936,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 1861059084}
           m_TargetAssemblyTypeName: Gameplay.TK8Manager, Assembly-CSharp
@@ -19105,7 +19064,6 @@ MonoBehaviour:
   - 40
   - 41.2
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 7400000, guid: 411c216d8b9c1ca45b8de2e6baf89ab1, type: 2}
   animator: {fileID: 7158843211735227011}
@@ -19113,10 +19071,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 1369046779}
-  buretRenderer: {fileID: 7158843211735227010}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 7158843211735227009}
-  burretCekungObject: {fileID: 7158843211735227008}
+  buretteFillObject: {fileID: 7158843211735227009}
+  buretteMeniskusObject: {fileID: 7158843211735227008}
 --- !u!1001 &1869029595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19188,12 +19144,6 @@ PrefabInstance:
 --- !u!4 &1869029596 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6787067149738513393, guid: b695a80f7b6c0124681f5d5f5cb6774e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1869029595}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1869029597 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2901416131920557164, guid: b695a80f7b6c0124681f5d5f5cb6774e,
     type: 3}
   m_PrefabInstance: {fileID: 1869029595}
   m_PrefabAsset: {fileID: 0}
@@ -19400,14 +19350,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Preparasi Larutan Baku Primer
+  mTrackableName: tba 3
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 220447625c492134aba67fddb1ab74e5, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: a030cc83c5200604d8c74255762c78fa, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -20230,14 +20180,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: erlenmeyer_flask
+  mTrackableName: tba6
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 73237c75531c353458c8c200c336a716, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 5d61d22415d47f34b96fff756b545c92, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -20251,7 +20201,7 @@ Transform:
   m_GameObject: {fileID: 1999526533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -566.005, y: -1951.8, z: 0}
+  m_LocalPosition: {x: -566.005, y: -1951.8, z: 0.0698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20401,10 +20351,6 @@ MonoBehaviour:
   Larutan2Container:
     fillObject: {fileID: 626653261}
     meniskusObject: {fileID: 626653260}
-  gelasUkurFillObject: {fileID: 626653263}
-  gelasUkurCekungObject: {fileID: 626653262}
-  gelasUkurFillObject2: {fileID: 626653261}
-  gelasUkurCekungObject2: {fileID: 626653260}
 --- !u!114 &1999526541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20419,7 +20365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1999526536}
   mHiddenRoot: {fileID: 0}
-  mTargetName: erlenmeyer_flask
+  mTargetName: tba6
   mDatasetName: 
   mCastedBehaviour: {fileID: 1999526536}
   mMeshFilter: {fileID: 0}
@@ -20975,12 +20921,6 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 2121138280}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &2121138283 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7343202932623283195, guid: 16355c58438d32c4b9243d00b8a7576f,
-    type: 3}
-  m_PrefabInstance: {fileID: 2121138280}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2127098565
 GameObject:
   m_ObjectHideFlags: 0
@@ -21255,12 +21195,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bcdceb273398d14b80b1d1ef415ed75, type: 3}
---- !u!23 &443362274160256497 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7457598989487664299, guid: 0bcdceb273398d14b80b1d1ef415ed75,
-    type: 3}
-  m_PrefabInstance: {fileID: 443362274160256496}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1129233140714235327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21374,14 +21308,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: preparasi larutan sampel - titrasi kompleksometri
+  mTrackableName: tk6
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
   mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 0336ad111ea2a434e9c8641024a0b607, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 7ac567de65f602648988a620f9e5eea5, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -21480,7 +21414,7 @@ Transform:
   m_GameObject: {fileID: 8139625941903175768}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48, y: 0, z: 0}
+  m_LocalPosition: {x: -48, y: 0, z: 0.0698}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21561,12 +21495,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e28e81723b0dbe4b9a7287be9e84b14, type: 3}
---- !u!23 &3517587671129020796 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2476974087298611614, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
-    type: 3}
-  m_PrefabInstance: {fileID: 3517587671129020795}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4214659927744032033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22130,6 +22058,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94bb1dfbb51a3504f99acc21aea80337, type: 3}
+--- !u!4 &5405446064099635182 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9209276425672284385, guid: 94bb1dfbb51a3504f99acc21aea80337,
+    type: 3}
+  m_PrefabInstance: {fileID: 5405446064099635181}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5499988241908468520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22160,10 +22094,6 @@ MonoBehaviour:
   Larutan2Container:
     fillObject: {fileID: 8282437265113007013}
     meniskusObject: {fileID: 8282437265113007012}
-  gelasUkurFillObject: {fileID: 8282437265113007015}
-  gelasUkurCekungObject: {fileID: 8282437265113007014}
-  gelasUkurFillObject2: {fileID: 8282437265113007013}
-  gelasUkurCekungObject2: {fileID: 8282437265113007012}
 --- !u!4 &5587039165051204351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5456461998121509978, guid: f3108b47f9439f244829440af0ece6e6,
@@ -22395,12 +22325,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7158843211735227005}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &7158843211735227010 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4240164178155469532, guid: dc8b745a78379b145b733455f2fc0ce1,
-    type: 3}
-  m_PrefabInstance: {fileID: 7158843211735227005}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &7158843211735227011 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: -5392860032474857718, guid: dc8b745a78379b145b733455f2fc0ce1,
@@ -22545,7 +22469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1208402446159745606}
   mHiddenRoot: {fileID: 0}
-  mTargetName: preparasi larutan sampel - titrasi kompleksometri
+  mTargetName: tk6
   mDatasetName: 
   mCastedBehaviour: {fileID: 1208402446159745606}
   mMeshFilter: {fileID: 0}

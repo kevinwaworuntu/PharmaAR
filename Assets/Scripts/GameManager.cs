@@ -10,15 +10,15 @@ public class GameManager : MonoBehaviour
     [Header("Mode Saat Ini")]
     public GameMode currentMode;
 
-    [Header("Data Tahapan")]
+    [Header("Tahapan Data")]
     public TahapanData[] tahapanTBA;
     public TahapanData[] tahapanKompleksometri;
 
-    public GameObject[] markerTBAMapping; // improve, not a propper way
-    public GameObject[] markerTKMapping; // improve if have time, not a propper way
+    [Header("Marker Mapping")]
+    public GameObject[] markerTBAMapping;
+    public GameObject[] markerTKMapping;
     
-    [Header("State (runtime only)")]
-    [Tooltip("Tahap yang sedang dikerjakan saat ini. -1 = belum ada.")]
+    [Header("Runtime State")]
     public int currentAttemptingTahapIndex = -1;
 
     private const string LAST_COMPLETED_TAHAP_TBA_KEY = "LastCompletedTahapTBA";
@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
 
     [Header("Config Data")] 
     [SerializeField] private AnimationConfig animationConfig;
-    // ToDo : Move should not clutter GameManager
     [SerializeField] private InfoStyleConfig styleConfigDefault;
     [SerializeField] private InfoStyleConfig styleConfigTBA;
     [SerializeField] private InfoStyleConfig styleConfigTK;
@@ -63,11 +62,6 @@ public class GameManager : MonoBehaviour
         if (VuforiaBehaviour.Instance != null)
         {
             VuforiaBehaviour.Instance.enabled = isActive;
-            Debug.Log($"[GameManager] Vuforia AR Camera: {(isActive ? "ON" : "OFF")}");
-        }
-        else
-        {
-            Debug.LogWarning("[GameManager] VuforiaBehaviour instance not found!");
         }
     }
     
@@ -80,9 +74,7 @@ public class GameManager : MonoBehaviour
     {
         currentMode = mode;
         currentAttemptingTahapIndex = -1;
-
-        Debug.Log($"[GameManager] SetMode = {currentMode}");
-
+        
         if (UIManager.Instance != null)
         {
             UIManager.Instance.ForceHideInfoPanel();
@@ -101,9 +93,9 @@ public class GameManager : MonoBehaviour
         
         if (tahapIndex > lastCompleted + 1)
         {
-            Debug.LogWarning($"[GameManager] Tahap {tahapIndex + 1} masih terkunci. LastCompleted = {lastCompleted}");
             return;
         }
+        
         switch (currentMode)
         {
             case GameMode.TBA:
@@ -114,11 +106,6 @@ public class GameManager : MonoBehaviour
                 break;
         }
         currentAttemptingTahapIndex = tahapIndex;
-
-        // ToDo : Data cuman buat debug (?)
-        TahapanData data = GetCurrentTahapanData(tahapIndex);
-        string namaTahap = data != null ? data.namaTahapan : $"Tahap {tahapIndex + 1}";
-        Debug.Log($"[GameManager] MULAI Tahap {tahapIndex + 1} - {namaTahap} (Mode {currentMode})");
         
         if (UIManager.Instance != null)
         {
@@ -133,7 +120,6 @@ public class GameManager : MonoBehaviour
     {
         if (currentAttemptingTahapIndex < 0)
         {
-            Debug.LogWarning("[GameManager] CompleteCurrentTahap dipanggil tapi tidak ada tahap aktif.");
             return;
         }
         switch (currentMode)
@@ -160,7 +146,6 @@ public class GameManager : MonoBehaviour
     {
         if (currentAttemptingTahapIndex < 0)
         {
-            Debug.LogWarning("[GameManager] CompleteCurrentTahap dipanggil tapi tidak ada tahap aktif.");
             return;
         }
         switch (currentMode)
@@ -175,10 +160,7 @@ public class GameManager : MonoBehaviour
         animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = null;
         PlayerPrefs.SetInt(CurrentProgressKey, currentAttemptingTahapIndex);
         PlayerPrefs.Save();
-
-        Debug.Log($"[GameManager] SELESAI Tahap {currentAttemptingTahapIndex + 1} (Mode {currentMode}). " +
-                  $"Tahap berikutnya yang akan terbuka: {currentAttemptingTahapIndex + 2}");
-
+        
         currentAttemptingTahapIndex = -1;
         SetARCameraActive(false);
 
@@ -223,16 +205,12 @@ public class GameManager : MonoBehaviour
         }
 
         infoPanel.SetActive(true);
-        Debug.Log("[GameManager] Info popup ditampilkan (bank).");
     }
     
-    // ToDo
     public void RetrieveTextStyle(TextMeshProUGUI textComponent, InfoStyleConfig config)
     {
-        // ToDo default value if null
         if (config == null)
         {
-            Debug.LogError("[GameManager] InfoStyleConfig config is null.");
             Debug.Break();
             return;
         }
@@ -252,7 +230,6 @@ public class GameManager : MonoBehaviour
         if (infoPanel != null)
         {
             infoPanel.SetActive(false);  
-            Debug.Log("[GameManager] Info popup disembunyikan.");
         }
     }
     
@@ -272,11 +249,6 @@ public class GameManager : MonoBehaviour
         return null;
     }
     
-    public void OnMarkerFound(string markerName)
-    {
-        Debug.Log($"[GameManager] Marker ditemukan: {markerName}. (Validasi tahapan DIMATIKAN sementara untuk debug indexing.)");
-    }
-
     public void ResetAllProgress()
     {
         PlayerPrefs.DeleteKey(LAST_COMPLETED_TAHAP_TBA_KEY);
@@ -286,9 +258,7 @@ public class GameManager : MonoBehaviour
         currentAttemptingTahapIndex = -1;
         UIManager.Instance.ForceHideInfoPanel();
         SetARCameraActive(false);
-
-        Debug.Log("[GameManager] ResetAllProgress: semua progres dihapus. Kembali ke Tahap 1 untuk tiap mode.");
-
+        
         if (UIManager.Instance != null)
         {
             UIManager.Instance.UpdateTahapButtonStates();

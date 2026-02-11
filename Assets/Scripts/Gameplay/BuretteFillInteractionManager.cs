@@ -207,7 +207,7 @@ namespace Gameplay
             {
                 yield return new WaitForSeconds(2f);
                 textSampelWeight.gameObject.SetActive(true);
-                textSampelWeight.SetText($"{weights[currentIndex]} mg");
+                textSampelWeight.SetText($"Bobot penimbangan: {weights[currentIndex]} mg");
            
             }
         }

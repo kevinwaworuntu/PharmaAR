@@ -121,6 +121,6 @@ public class ARContentManager : MonoBehaviour
             return;
         }
         UIManager.Instance.btnNextInteraction.gameObject.SetActive(nextActive);
-        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(!completeActive);
+        UIManager.Instance.btnCompleteTahapan.gameObject.SetActive(completeActive);
     }
 }
