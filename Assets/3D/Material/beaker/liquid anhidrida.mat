@@ -53,7 +53,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.08
+    - _Alpha: 0.155
     - _AlphaClip: 1
     - _Fill: 0
     - _QueueControl: 0
