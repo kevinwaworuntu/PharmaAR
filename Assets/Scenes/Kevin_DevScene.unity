@@ -165,7 +165,6 @@ MonoBehaviour:
   - 40
   - 41.2
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 1207063081}
@@ -173,10 +172,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 0}
-  buretRenderer: {fileID: 1207063078}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 0}
-  burretCekungObject: {fileID: 0}
+  buretteFillObject: {fileID: 0}
+  buretteMeniskusObject: {fileID: 0}
 --- !u!4 &80527747
 Transform:
   m_ObjectHideFlags: 0
@@ -543,21 +540,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3108b47f9439f244829440af0ece6e6, type: 3}
---- !u!23 &146357019 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1523046379579689666, guid: f3108b47f9439f244829440af0ece6e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 146357018}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &146357020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5456461998121509978, guid: f3108b47f9439f244829440af0ece6e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 146357018}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &146357021 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8605637039256769440, guid: f3108b47f9439f244829440af0ece6e6,
     type: 3}
   m_PrefabInstance: {fileID: 146357018}
   m_PrefabAsset: {fileID: 0}
@@ -749,14 +734,12 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: b914157045593dc40b8d1f962835fc08,
     type: 2}
   animator: {fileID: 146357022}
-  larutan1Renderer: {fileID: 146357021}
-  larutan2Renderer: {fileID: 146357019}
-  value1Ml: 0.0008
-  value10Ml: 0.008
-  gelasUkurFillObject: {fileID: 0}
-  gelasUkurCekungObject: {fileID: 0}
-  gelasUkurFillObject2: {fileID: 0}
-  gelasUkurCekungObject2: {fileID: 0}
+  larutan1Container:
+    fillObject: {fileID: 0}
+    meniskusObject: {fileID: 0}
+  Larutan2Container:
+    fillObject: {fileID: 0}
+    meniskusObject: {fileID: 0}
 --- !u!114 &317210422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,21 +1217,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daad4a153976f1844b12e1feb7869772, type: 3}
---- !u!23 &359061376 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 4423122180961485172, guid: daad4a153976f1844b12e1feb7869772,
-    type: 3}
-  m_PrefabInstance: {fileID: 359061375}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &359061377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3759076688289342629, guid: daad4a153976f1844b12e1feb7869772,
-    type: 3}
-  m_PrefabInstance: {fileID: 359061375}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &359061378 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1337581790764722957, guid: daad4a153976f1844b12e1feb7869772,
     type: 3}
   m_PrefabInstance: {fileID: 359061375}
   m_PrefabAsset: {fileID: 0}
@@ -1326,12 +1297,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f25e18ad9e66a1c498088a20ab7e2220, type: 3}
---- !u!23 &490721058 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8525310727519815099, guid: f25e18ad9e66a1c498088a20ab7e2220,
-    type: 3}
-  m_PrefabInstance: {fileID: 490721057}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &490721059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8531127095363720394, guid: f25e18ad9e66a1c498088a20ab7e2220,
@@ -1418,12 +1383,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bcdceb273398d14b80b1d1ef415ed75, type: 3}
---- !u!23 &495541729 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7457598989487664299, guid: 0bcdceb273398d14b80b1d1ef415ed75,
-    type: 3}
-  m_PrefabInstance: {fileID: 495541728}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &495541730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2121119002977014278, guid: 0bcdceb273398d14b80b1d1ef415ed75,
@@ -2110,18 +2069,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 598543275}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &598543278 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1092452694802437487, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 598543275}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &598543279 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1220168540176611484, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 598543275}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &630596117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2190,12 +2137,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e28e81723b0dbe4b9a7287be9e84b14, type: 3}
---- !u!23 &630596118 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2476974087298611614, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
-    type: 3}
-  m_PrefabInstance: {fileID: 630596117}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &630596119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7093704636688453756, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
@@ -2213,6 +2154,12 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 779033394730817121, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
     type: 3}
   m_PrefabInstance: {fileID: 630596117}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &761703238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4594583945710788423, guid: b695a80f7b6c0124681f5d5f5cb6774e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1250885069}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &785927405
 GameObject:
@@ -2260,7 +2207,6 @@ MonoBehaviour:
   - 6.8
   - 7
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 1250885074}
@@ -2268,10 +2214,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 0}
-  buretRenderer: {fileID: 1250885070}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 2680070490692048243}
-  burretCekungObject: {fileID: 3721805122287479517}
+  buretteFillObject: {fileID: 2680070490692048243}
+  buretteMeniskusObject: {fileID: 0}
 --- !u!114 &785927408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,14 +2558,12 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: a8cbf2d95d0a7544fa3d922b8fb56680,
     type: 2}
   animator: {fileID: 359061379}
-  larutan1Renderer: {fileID: 359061378}
-  larutan2Renderer: {fileID: 359061376}
-  value1Ml: 0.0008
-  value10Ml: 0.008
-  gelasUkurFillObject: {fileID: 0}
-  gelasUkurCekungObject: {fileID: 0}
-  gelasUkurFillObject2: {fileID: 0}
-  gelasUkurCekungObject2: {fileID: 0}
+  larutan1Container:
+    fillObject: {fileID: 0}
+    meniskusObject: {fileID: 0}
+  Larutan2Container:
+    fillObject: {fileID: 0}
+    meniskusObject: {fileID: 0}
 --- !u!114 &823581508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3106,14 +3048,12 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: 4469e80f57968cd4f96a15cd754a98a4,
     type: 2}
   animator: {fileID: 1561880710}
-  larutan1Renderer: {fileID: 1561880716}
-  larutan2Renderer: {fileID: 1561880715}
-  value1Ml: 0.0008
-  value10Ml: 0.008
-  gelasUkurFillObject: {fileID: 1561880714}
-  gelasUkurCekungObject: {fileID: 1561880713}
-  gelasUkurFillObject2: {fileID: 1561880712}
-  gelasUkurCekungObject2: {fileID: 1561880711}
+  larutan1Container:
+    fillObject: {fileID: 0}
+    meniskusObject: {fileID: 0}
+  Larutan2Container:
+    fillObject: {fileID: 0}
+    meniskusObject: {fileID: 0}
 --- !u!114 &1095405889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3311,12 +3251,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e28e81723b0dbe4b9a7287be9e84b14, type: 3}
---- !u!23 &1207063078 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2476974087298611614, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
-    type: 3}
-  m_PrefabInstance: {fileID: 1207063077}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1207063079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7093704636688453756, guid: 3e28e81723b0dbe4b9a7287be9e84b14,
@@ -3352,6 +3286,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5962139077670509968, guid: b695a80f7b6c0124681f5d5f5cb6774e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6787067149738513393, guid: b695a80f7b6c0124681f5d5f5cb6774e,
         type: 3}
@@ -3406,14 +3345,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4594583945710788423, guid: b695a80f7b6c0124681f5d5f5cb6774e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1250885076}
   m_SourcePrefab: {fileID: 100100000, guid: b695a80f7b6c0124681f5d5f5cb6774e, type: 3}
---- !u!23 &1250885070 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2901416131920557164, guid: b695a80f7b6c0124681f5d5f5cb6774e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1250885069}
-  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1250885073 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 3843404100416005533, guid: b695a80f7b6c0124681f5d5f5cb6774e,
@@ -3426,6 +3363,31 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1250885069}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1250885076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761703238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d33a5177b5549f48dccbf33146e4d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weights: []
+  floorTargets: []
+  ceilTargets: []
+  animClipOpenKeran: {fileID: 0}
+  animClipTetes: {fileID: 0}
+  animClipTetesBanyak: {fileID: 0}
+  animator: {fileID: 0}
+  titrasiRenderer: {fileID: 0}
+  initialColor: {r: 0, g: 0, b: 0, a: 0}
+  targetColor: {r: 0, g: 0, b: 0, a: 0}
+  textSampelWeight: {fileID: 0}
+  buretteFillObject: {fileID: 2680070490692048243}
+  buretteMeniskusObject: {fileID: 3721805122287479517}
 --- !u!1 &1273295607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,7 +3428,6 @@ MonoBehaviour:
   ceilTargets:
   - 0.1
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 490721061}
@@ -3474,10 +3435,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0.5157392, g: 1, b: 0, a: 1}
   textSampelWeight: {fileID: 0}
-  buretRenderer: {fileID: 490721058}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 0}
-  burretCekungObject: {fileID: 0}
+  buretteFillObject: {fileID: 0}
+  buretteMeniskusObject: {fileID: 0}
 --- !u!114 &1273295609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3708,7 +3667,6 @@ MonoBehaviour:
   - 20.8
   - 21.2
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 1751781248}
@@ -3716,10 +3674,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 1, b: 0.065570354, a: 1}
   textSampelWeight: {fileID: 0}
-  buretRenderer: {fileID: 1751781245}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 0}
-  burretCekungObject: {fileID: 0}
+  buretteFillObject: {fileID: 0}
+  buretteMeniskusObject: {fileID: 0}
 --- !u!114 &1308476598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4367,42 +4323,6 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1561880709}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1561880711 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5357037581104699551, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 1561880709}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1561880712 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 769821400243373978, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 1561880709}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1561880713 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1241474087442050617, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 1561880709}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1561880714 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5894203844010455356, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 1561880709}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1561880715 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1092452694802437487, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 1561880709}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1561880716 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1220168540176611484, guid: 1d6e116cdb1c55348acad46535146464,
-    type: 3}
-  m_PrefabInstance: {fileID: 1561880709}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1725823246
 GameObject:
   m_ObjectHideFlags: 0
@@ -4561,12 +4481,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16355c58438d32c4b9243d00b8a7576f, type: 3}
---- !u!23 &1751781245 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 7343202932623283195, guid: 16355c58438d32c4b9243d00b8a7576f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1751781244}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1751781246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4673681632115003813, guid: 16355c58438d32c4b9243d00b8a7576f,
@@ -4650,7 +4564,6 @@ MonoBehaviour:
   - 9.2
   - 11.2
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 630596121}
@@ -4658,10 +4571,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 0}
-  buretRenderer: {fileID: 630596118}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 0}
-  burretCekungObject: {fileID: 0}
+  buretteFillObject: {fileID: 0}
+  buretteMeniskusObject: {fileID: 0}
 --- !u!114 &1755273054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,7 +4923,6 @@ MonoBehaviour:
   ceilTargets:
   - 0.1
   animClipOpenKeran: {fileID: 7400000, guid: f568fd48f48c9e9478a7b84f0cbd8e3f, type: 2}
-  animClipCloseKeran: {fileID: 7400000, guid: d22b218d750604b468c37e7a850255e8, type: 2}
   animClipTetes: {fileID: 7400000, guid: b93ca09fb6135e241be1dbadd9b5e7b2, type: 2}
   animClipTetesBanyak: {fileID: 0}
   animator: {fileID: 495541732}
@@ -5020,10 +4930,8 @@ MonoBehaviour:
   initialColor: {r: 0.6037736, g: 0, b: 0.41510385, a: 1}
   targetColor: {r: 0, g: 0.14509805, b: 1, a: 1}
   textSampelWeight: {fileID: 0}
-  buretRenderer: {fileID: 495541729}
-  value01Ml: 0.0004
-  burretFillObject: {fileID: 0}
-  burretCekungObject: {fileID: 0}
+  buretteFillObject: {fileID: 0}
+  buretteMeniskusObject: {fileID: 0}
 --- !u!114 &1889550330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5358,14 +5266,12 @@ MonoBehaviour:
   animClipLarutan2_10ml: {fileID: 7400000, guid: 4469e80f57968cd4f96a15cd754a98a4,
     type: 2}
   animator: {fileID: 598543276}
-  larutan1Renderer: {fileID: 598543279}
-  larutan2Renderer: {fileID: 598543278}
-  value1Ml: 0.0008
-  value10Ml: 0.008
-  gelasUkurFillObject: {fileID: 0}
-  gelasUkurCekungObject: {fileID: 0}
-  gelasUkurFillObject2: {fileID: 0}
-  gelasUkurCekungObject2: {fileID: 0}
+  larutan1Container:
+    fillObject: {fileID: 0}
+    meniskusObject: {fileID: 0}
+  Larutan2Container:
+    fillObject: {fileID: 0}
+    meniskusObject: {fileID: 0}
 --- !u!114 &2049800192
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ namespace Gameplay
         [Header("BURETTE FILL SETTINGS")]
         [SerializeField] private Transform buretteFillObject;
         [FormerlySerializedAs("burretMeniskusObject")] [SerializeField] private Transform buretteMeniskusObject;
-        private float fillObjectScaleModifier = 0.21853f;
+        private float fillObjectScaleModifier = 0.1790f;
         private float fillObjectInitialScale = 90.93853f;
         private float meniskusPositionModifier = 0.00107706f;
         private float meniskusInitPos = 0.578676f;
@@ -211,7 +211,11 @@ namespace Gameplay
            
             }
         }
-       
+        [ContextMenu("Test")]
+        private void Test()
+        {
+            BuretteFillValue(10);
+        }
         private void BuretteFillValue(float targetMl)
         {
             var targetScaleZ = buretteFillObject.transform.localScale.z - fillObjectScaleModifier * targetMl;
