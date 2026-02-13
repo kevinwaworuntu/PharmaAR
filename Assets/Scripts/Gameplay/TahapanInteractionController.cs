@@ -21,7 +21,6 @@ namespace Gameplay
 
         private int currentInteractionIndex;
         private bool isPlaying;
-        private bool isStarted;
         private TahapanInteractionPlayer interactionPlayer;
 
         public event Action OnStartWaitingForPlayerInputToContinue;
@@ -31,6 +30,10 @@ namespace Gameplay
         void Awake()
         {
             interactionPlayer = new TahapanInteractionPlayer();
+            if (!GameManager.Instance.AnimationConfig)
+            {
+                return;
+            }
             interactionPlayer.Initialize(this, animator, audioSource, GameManager.Instance.AnimationConfig);
         }
 
@@ -41,7 +44,6 @@ namespace Gameplay
         
         private void OnDisable()
         {
-            isStarted = false;
             if (UIManager.Instance)
             {
                 if (UIManager.Instance.btnPlayAnimation) UIManager.Instance.btnPlayAnimation.onClick.RemoveAllListeners();
@@ -194,7 +196,6 @@ namespace Gameplay
         private void ResetState()
         {
             currentInteractionIndex = 0;
-            isStarted = false;
             isPlaying = false;
         }
     }

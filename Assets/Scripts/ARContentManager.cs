@@ -10,19 +10,19 @@ public class ARContentManager : MonoBehaviour
     {
         tahapanInteractionController = GetComponent<TahapanInteractionController>();
     }
-    
-    protected void Start()
+
+    protected void OnEnable()
     {
-        if (tahapanInteractionController != null)
+        if (!tahapanInteractionController)
+        {
+            tahapanInteractionController = GetComponent<TahapanInteractionController>();
+        }
+        if (tahapanInteractionController)
         {
             tahapanInteractionController.OnStartWaitingForPlayerInputToContinue += OnStartWaitingForPlayerInputToContinueHandler;
             tahapanInteractionController.OnFinishPlayingInteraction += OnFinishPlayingTahapanInteractionHandler;
             tahapanInteractionController.OnInteractionComplete += OnInteractionCompleteHandler;
         }
-    }
-
-    protected void OnEnable()
-    {
         if (!UIManager.Instance)
         {
             return;
@@ -103,10 +103,9 @@ public class ARContentManager : MonoBehaviour
             return;
         }
         UIManager.Instance.NarationPanel.gameObject.SetActive(false);
-        ToggleNavigationButtons(true, false);
+        ToggleNavigationButtons(false, true);
 
         UIManager.Instance.btnCompleteTahapan.onClick.RemoveAllListeners();
-        UIManager.Instance.btnCompleteTahapan.onClick.AddListener(GameManager.Instance.CompleteCurrentTahap);
         UIManager.Instance.btnCompleteTahapan.onClick.AddListener(() => 
         {
             GameManager.Instance.CompleteCurrentTahap();
