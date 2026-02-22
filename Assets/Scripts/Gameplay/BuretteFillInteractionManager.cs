@@ -68,6 +68,9 @@ namespace Gameplay
             }
             currentWeight = 0;
             ContextualButtonController.Instance.DestroyButtons();
+            titrasiMatInstance.SetColor(SideColorID, initialColor);
+            titrasiMatInstance.SetColor(TopColorID, initialColor);
+            ResetBuretteFill();
             base.OnStartWaitingForPlayerInputToContinueHandler();
             SetIsCheckWeightToContinue(false);
             textSampelWeight.gameObject.SetActive(false);
