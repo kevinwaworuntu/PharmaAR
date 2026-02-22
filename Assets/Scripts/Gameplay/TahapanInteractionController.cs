@@ -30,6 +30,10 @@ namespace Gameplay
         void Awake()
         {
             interactionPlayer = new TahapanInteractionPlayer();
+            if (!GameManager.Instance)
+            {
+                return;
+            }
             if (!GameManager.Instance.AnimationConfig)
             {
                 return;
@@ -90,6 +94,10 @@ namespace Gameplay
             currentInteractionIndex = targetIndex;
             isPlaying = true;
 
+            if (!UIManager.Instance)
+            {
+                return;
+            }
             UIManager.Instance.NarationPanel.SetVisibility(HasNarationText());
             if (HasAnimationClip())
             {

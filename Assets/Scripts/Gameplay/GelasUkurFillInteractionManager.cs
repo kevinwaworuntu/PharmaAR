@@ -33,6 +33,7 @@ namespace Gameplay
         [SerializeField] private AnimationClip animClipLarutan2_1ml;
         [SerializeField] private AnimationClip animClipLarutan2_10ml;
         [SerializeField] private Animator animator;
+        [SerializeField] private AnimNotify animNotify;
         
         [FormerlySerializedAs("container1")]
         [Header("Liquid Containers")]
@@ -47,10 +48,33 @@ namespace Gameplay
         private int currentWeight;
         private bool isCheckWeightToContinue;
         private LarutanType currentLarutanType = LarutanType.Larutan1;
-        
-        
-        protected void OnDisable()
+        private int targetML;
+
+
+        protected override void OnEnable()
         {
+            base.OnEnable();
+
+            if (!animNotify)
+            {
+                animNotify = transform.GetComponentInChildren<AnimNotify>();
+            }
+            if (animNotify)
+            {
+                animNotify.OnNotifyHit += OnStartUpdateVisualFill;
+            }
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+
+            targetML = 0;
+            if (animNotify)
+            {
+                animNotify.OnNotifyHit -= OnStartUpdateVisualFill;
+            }
+            
             ResetLarutanContainer(larutan1Container);
             ResetLarutanContainer(Larutan2Container);
         }
@@ -82,8 +106,9 @@ namespace Gameplay
             ContextualButtonController.Instance.RegisterAction(0, () =>
             {
                 currentWeight += 1;
+                targetML = 1;
                 PlayAnimation(clip1ml);
-                UpdateVisualFill(currentLarutanType == LarutanType.Larutan1 ? larutan1Container : Larutan2Container, 1);
+                //UpdateVisualFill(currentLarutanType == LarutanType.Larutan1 ? larutan1Container : Larutan2Container, 1);
             });
 
             // Register 10ml Button
@@ -91,8 +116,9 @@ namespace Gameplay
             ContextualButtonController.Instance.RegisterAction(1, () =>
             {
                 currentWeight += 10;
+                targetML = 10;
                 PlayAnimation(clip10ml);
-                UpdateVisualFill(currentLarutanType == LarutanType.Larutan1 ? larutan1Container : Larutan2Container, 10);
+                //UpdateVisualFill(currentLarutanType == LarutanType.Larutan1 ? larutan1Container : Larutan2Container, 10);
             });
         }
         
@@ -205,6 +231,11 @@ namespace Gameplay
             Vector3 pos = container.meniskusObject.localPosition;
             pos.y = meniskusInitPos;
             container.meniskusObject.localPosition = pos;
+        }
+        
+        private void OnStartUpdateVisualFill()
+        {
+            UpdateVisualFill(currentLarutanType == LarutanType.Larutan1 ? larutan1Container : Larutan2Container, targetML);
         }
     }
 }

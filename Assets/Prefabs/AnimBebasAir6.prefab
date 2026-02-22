@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3035883934367178429}
   - component: {fileID: 7419187755355519323}
   - component: {fileID: 5791880417280129162}
+  - component: {fileID: 1936381259549208831}
   m_Layer: 0
   m_Name: AnimBebasAir6
   m_TagString: Untagged
@@ -109,6 +110,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3503418, y: 0.10297251, z: 0.111140855}
   m_Center: {x: 0.007801056, y: 0.048782945, z: 0.01979037}
+--- !u!114 &1936381259549208831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4715730020038534375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fd747ed1b14429b59216946735f3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4997497639846968482
 GameObject:
   m_ObjectHideFlags: 0

@@ -140,7 +140,6 @@ public class UIManager : MonoBehaviour
         if (currentActivePanel == panelScanAR && GameManager.Instance != null)
         {
             GameManager.Instance.SetARCameraActive(false);
-            GameManager.Instance.SetARCameraActive(false);
             HideAllARPopups();
         }
 
@@ -211,8 +210,8 @@ public class UIManager : MonoBehaviour
     
     public void SetButtonNavigationVisibility(bool enabled)
     { 
-        btnARNext.gameObject.SetActive(enabled);
-        btnARPrev.gameObject.SetActive(enabled);
+        if(btnARNext) btnARNext.gameObject.SetActive(enabled);
+        if(btnARPrev) btnARPrev.gameObject.SetActive(enabled);
     }
     
     public void SetButtonAnimationVisibility(bool enabled)

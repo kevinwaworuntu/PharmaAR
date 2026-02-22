@@ -24,6 +24,10 @@ namespace UI
         
         public void GenerateContextualButton(int size)
         {
+            foreach (ContextualButton contextualButton in contextualButtons)
+            {
+                Destroy(contextualButton);
+            }
             contextualButtons.Clear();
             for (int i = 0; i < size; i++)
             {

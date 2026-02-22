@@ -256,11 +256,11 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
 
         currentAttemptingTahapIndex = -1;
-        UIManager.Instance.ForceHideInfoPanel();
         SetARCameraActive(false);
         
         if (UIManager.Instance != null)
         {
+            UIManager.Instance.ForceHideInfoPanel();
             UIManager.Instance.UpdateTahapButtonStates();
         }
     }

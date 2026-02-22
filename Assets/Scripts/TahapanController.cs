@@ -29,8 +29,11 @@ public class TahapanController : MonoBehaviour
     {
         if (myButton != null)
         {
-            myButton.onClick.AddListener(OnTahapClicked);
-            myButton.onClick.AddListener(OnInfoButtonClicked);
+            myButton.onClick.AddListener(() =>
+            {
+                OnTahapClicked();
+                OnInfoButtonClicked();
+            });
         }
     }
 

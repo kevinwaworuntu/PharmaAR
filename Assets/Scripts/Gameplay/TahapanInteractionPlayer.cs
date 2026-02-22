@@ -78,7 +78,7 @@ namespace Gameplay
             }
             if (data.AudioNaration != null)
             {
-                audioSource.PlayOneShot(data.AudioNaration);
+                if(audioSource) audioSource.PlayOneShot(data.AudioNaration);
                 coroutineRunner.StartCoroutine(WaitForDuration(data.AudioNaration.length, () => 
                     { 
                         isAudioClipFinished = true;

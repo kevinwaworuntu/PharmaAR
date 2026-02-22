@@ -1,3 +1,4 @@
+using System;
 using Gameplay;
 using UI;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class ARContentManager : MonoBehaviour
         tahapanInteractionController = GetComponent<TahapanInteractionController>();
     }
 
-    protected void OnEnable()
+    protected virtual void OnEnable()
     {
         if (!tahapanInteractionController)
         {
@@ -30,7 +31,7 @@ public class ARContentManager : MonoBehaviour
         ToggleNavigationButtons(false, false);
     }
 
-    private void OnDestroy()
+    protected virtual void OnDisable()
     {
         if (tahapanInteractionController != null)
         {
