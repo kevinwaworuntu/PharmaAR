@@ -12034,7 +12034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1055366858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24239,10 +24239,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3948621644838486059, guid: 25e2c3e5462a7b24880ed171af5f4b3d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.1701593
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948621644838486059, guid: 25e2c3e5462a7b24880ed171af5f4b3d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.1701593
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948621644838486059, guid: 25e2c3e5462a7b24880ed171af5f4b3d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7.1701593
+      objectReference: {fileID: 0}
     - target: {fileID: 6426963154993060987, guid: 25e2c3e5462a7b24880ed171af5f4b3d,
         type: 3}
       propertyPath: m_Name
       value: AnimBebasAir3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6426963154993060987, guid: 25e2c3e5462a7b24880ed171af5f4b3d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7561025128631787625, guid: 25e2c3e5462a7b24880ed171af5f4b3d,
         type: 3}
@@ -24822,6 +24842,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6151963}
     m_Modifications:
+    - target: {fileID: 289698595187027659, guid: 16f028fd3a11d08478ab38284a2326d1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e3cb983380d24d041a3aeca304587343, type: 2}
     - target: {fileID: 3306281905764405289, guid: 16f028fd3a11d08478ab38284a2326d1,
         type: 3}
       propertyPath: m_LocalPosition.x
