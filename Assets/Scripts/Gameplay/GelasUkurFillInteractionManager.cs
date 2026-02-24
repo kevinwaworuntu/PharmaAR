@@ -108,7 +108,6 @@ namespace Gameplay
                 currentWeight += 1;
                 targetML = 1;
                 PlayAnimation(clip1ml);
-                //UpdateVisualFill(currentLarutanType == LarutanType.Larutan1 ? larutan1Container : Larutan2Container, 1);
             });
 
             // Register 10ml Button
@@ -118,7 +117,6 @@ namespace Gameplay
                 currentWeight += 10;
                 targetML = 10;
                 PlayAnimation(clip10ml);
-                //UpdateVisualFill(currentLarutanType == LarutanType.Larutan1 ? larutan1Container : Larutan2Container, 10);
             });
         }
         

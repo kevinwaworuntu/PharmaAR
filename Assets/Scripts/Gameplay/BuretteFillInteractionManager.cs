@@ -53,8 +53,7 @@ namespace Gameplay
             base.OnEnable();
             
             ResetBuretteFill();
-            titrasiMatInstance.SetColor(SideColorID, initialColor);
-            titrasiMatInstance.SetColor(TopColorID, initialColor);
+            RestartErlenmeyerVisual();
         }
         
         protected override void OnStartWaitingForPlayerInputToContinueHandler()
@@ -68,9 +67,6 @@ namespace Gameplay
             }
             currentWeight = 0;
             ContextualButtonController.Instance.DestroyButtons();
-            titrasiMatInstance.SetColor(SideColorID, initialColor);
-            titrasiMatInstance.SetColor(TopColorID, initialColor);
-            ResetBuretteFill();
             base.OnStartWaitingForPlayerInputToContinueHandler();
             SetIsCheckWeightToContinue(false);
             textSampelWeight.gameObject.SetActive(false);
@@ -106,12 +102,17 @@ namespace Gameplay
 
         private void RestartCurrentInteraction()
         {
-            currentWeight = 0; 
-            titrasiMatInstance.SetColor(SideColorID, initialColor);
-            titrasiMatInstance.SetColor(TopColorID, initialColor);
+            currentWeight = 0;
+            RestartErlenmeyerVisual();
             ResetBuretteFill();
             ContextualButtonController.Instance.DestroyButtons();
             tahapanInteractionController.RestartInteraction();
+        }
+
+        public void RestartErlenmeyerVisual()
+        {
+            titrasiMatInstance.SetColor(SideColorID, initialColor);
+            titrasiMatInstance.SetColor(TopColorID, initialColor);
         }
         
         public void CreateButtonInteraction()
@@ -136,6 +137,7 @@ namespace Gameplay
                 TetesanSequenceExecutor(10);
             });
         }
+        
         public void TetesanSequenceExecutor(int totalTetes)
         {
             if (isPlaying)
@@ -214,11 +216,7 @@ namespace Gameplay
            
             }
         }
-        [ContextMenu("Test")]
-        private void Test()
-        {
-            BuretteFillValue(10);
-        }
+
         private void BuretteFillValue(float targetMl)
         {
             var targetScaleZ = buretteFillObject.transform.localScale.z - fillObjectScaleModifier * targetMl;
@@ -228,7 +226,7 @@ namespace Gameplay
             buretteMeniskusObject.transform.localPosition = new Vector3(buretteMeniskusObject.transform.localPosition.x, targetY, buretteMeniskusObject.transform.localPosition.z);
         }
 
-        private void ResetBuretteFill()
+        public void ResetBuretteFill()
         {
             buretteFillObject.transform.localScale = new Vector3(buretteFillObject.transform.localScale.x, buretteFillObject.transform.localScale.y, fillObjectInitialScale);
             buretteMeniskusObject.transform.localPosition = new Vector3(buretteMeniskusObject.transform.localPosition.x, meniskusInitPos, buretteMeniskusObject.transform.localPosition.z);

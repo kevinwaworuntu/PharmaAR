@@ -158,8 +158,11 @@ public class GameManager : MonoBehaviour
                 break;
         }
         animationConfig.GenericAnimController[animationConfig.GetAnimGenericClipEntryName()] = null;
-        PlayerPrefs.SetInt(CurrentProgressKey, currentAttemptingTahapIndex);
-        PlayerPrefs.Save();
+        if (PlayerPrefs.GetInt(CurrentProgressKey, -1) <= currentAttemptingTahapIndex)
+        {
+            PlayerPrefs.SetInt(CurrentProgressKey, currentAttemptingTahapIndex);
+            PlayerPrefs.Save();
+        }
         
         currentAttemptingTahapIndex = -1;
         SetARCameraActive(false);

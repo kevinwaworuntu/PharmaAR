@@ -13,6 +13,9 @@ namespace Gameplay
         private MonoBehaviour coroutineRunner;
 
         private bool isFinished;
+       
+        // Spare duration before auto finish (2.5 seconds)
+        const float minPlayDuration = 2.5f;
         
         public void Initialize(MonoBehaviour coroutineRunner, Animator animator = null, AudioSource audioSource = null, AnimationConfig animationConfig = null)
         {
@@ -48,7 +51,11 @@ namespace Gameplay
             
             if (isAnimationFinished && isAudioClipFinished)
             {
-                onFinishedCallback?.Invoke();
+                coroutineRunner.StartCoroutine(WaitForDuration(minPlayDuration, () => 
+                    { 
+                        onFinishedCallback?.Invoke(); 
+                    }
+                ));
                 return;
             }
 
@@ -64,7 +71,7 @@ namespace Gameplay
                     {
                         animator.SetTrigger(animationConfig.StopAnimationParamName);
                         animator.SetTrigger(animationConfig.PlayAnimationParamName);
-                        coroutineRunner.StartCoroutine(WaitForDuration(data.AnimationClip.length, () => // This is only valid if animation speed is constant
+                        coroutineRunner.StartCoroutine(WaitForDuration(Mathf.Max(data.AnimationClip.length, minPlayDuration), () => // This is only valid if animation speed is constant
                             { 
                                 isAnimationFinished = true;
                                 TryFinish(isAnimationFinished, isAudioClipFinished, () =>
@@ -79,7 +86,7 @@ namespace Gameplay
             if (data.AudioNaration != null)
             {
                 if(audioSource) audioSource.PlayOneShot(data.AudioNaration);
-                coroutineRunner.StartCoroutine(WaitForDuration(data.AudioNaration.length, () => 
+                coroutineRunner.StartCoroutine(WaitForDuration(Mathf.Max(data.AudioNaration.length, minPlayDuration), () => 
                     { 
                         isAudioClipFinished = true;
                         TryFinish(isAnimationFinished, isAudioClipFinished, () =>
