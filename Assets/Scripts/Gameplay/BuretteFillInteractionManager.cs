@@ -64,6 +64,9 @@ namespace Gameplay
                 {
                     return;
                 }
+                //Extra safety
+                titrasiMatInstance.SetColor(SideColorID, targetColor);
+                titrasiMatInstance.SetColor(TopColorID, targetColor);
             }
             currentWeight = 0;
             ContextualButtonController.Instance.DestroyButtons();
@@ -118,8 +121,7 @@ namespace Gameplay
         public void CreateButtonInteraction()
         {
             SetSampelWeightTextVisible();
-            titrasiMatInstance.SetColor(SideColorID, initialColor);
-            titrasiMatInstance.SetColor(TopColorID, initialColor);
+            RestartErlenmeyerVisual();
             ResetBuretteFill();
             
             ContextualButtonController.Instance.GenerateContextualButton(2);
@@ -181,7 +183,7 @@ namespace Gameplay
             }
             
             animator.SetTrigger(animationConfig.PlayAnimationParamName);
-            yield return new WaitForSeconds(animClipOpenKeran.length);
+            yield return new WaitForSeconds(totalTetes == 1 ? animClipTetes.length : animClipTetesBanyak.length );
 
             SetButtonEnabledState(true);
             isPlaying = false;
@@ -210,7 +212,7 @@ namespace Gameplay
             StartCoroutine(DelaySetSampelWeight());
             IEnumerator DelaySetSampelWeight() // Wait for current index updated
             {
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(1f);
                 textSampelWeight.gameObject.SetActive(true);
                 textSampelWeight.SetText($"Bobot penimbangan: {weights[currentIndex]} mg");
            

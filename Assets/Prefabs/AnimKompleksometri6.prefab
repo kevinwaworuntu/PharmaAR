@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 1451762540912998805}
   - component: {fileID: 5742845580173736799}
   - component: {fileID: 6037905820170100223}
+  - component: {fileID: 1910213251343410470}
   m_Layer: 0
   m_Name: AnimKompleksometri6
   m_TagString: Untagged
@@ -173,6 +174,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d040188dd3529e1439ca7952eee1d46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1910213251343410470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9111084771315123910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fd747ed1b14429b59216946735f3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &208123519713171014
@@ -483,17 +496,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 171fb9905c559fa419d8704a58b44b0f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 318.00644
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 171fb9905c559fa419d8704a58b44b0f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 318.00644
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 171fb9905c559fa419d8704a58b44b0f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 318.00644
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 171fb9905c559fa419d8704a58b44b0f,
         type: 3}
@@ -554,7 +567,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: bc988c7bd208f8c4bab247b07057a81e, type: 2}
+      objectReference: {fileID: 2100000, guid: b3fbf7f1cdaaf4d418f1c989956e1e17, type: 2}
     - target: {fileID: 919132149155446097, guid: 171fb9905c559fa419d8704a58b44b0f,
         type: 3}
       propertyPath: m_Name
@@ -1135,7 +1148,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 54a8661d23da7cf41a52e687669e2d38, type: 2}
+      objectReference: {fileID: 2100000, guid: b3fbf7f1cdaaf4d418f1c989956e1e17, type: 2}
     - target: {fileID: 919132149155446097, guid: 171fb9905c559fa419d8704a58b44b0f,
         type: 3}
       propertyPath: m_Name
@@ -1144,7 +1157,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 171fb9905c559fa419d8704a58b44b0f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
