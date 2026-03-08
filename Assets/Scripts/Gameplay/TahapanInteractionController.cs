@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -130,7 +131,13 @@ namespace Gameplay
                     OnStartWaitingForPlayerInputToContinue?.Invoke();
                     return;
                 }
-                ExitInteractionState();
+
+                StartCoroutine(WorkaroundEndTahapanDelay());
+                IEnumerator WorkaroundEndTahapanDelay()
+                {
+                    yield return new WaitForSeconds(2f); // ToDo : Workaround
+                    ExitInteractionState();
+                }
             });
         }
 

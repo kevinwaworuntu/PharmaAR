@@ -15,7 +15,7 @@ namespace Gameplay
         private bool isFinished;
        
         // Spare duration before auto finish (2.5 seconds)
-        const float minPlayDuration = 2.5f;
+        const float minPlayDuration = 0f;
         
         public void Initialize(MonoBehaviour coroutineRunner, Animator animator = null, AudioSource audioSource = null, AnimationConfig animationConfig = null)
         {
